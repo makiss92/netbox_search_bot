@@ -1,0 +1,188 @@
+2025-03-06 22:38:06,331 - INFO - Start polling
+2025-03-06 22:38:06,334 - INFO - Polling stopped
+2025-03-06 22:38:11,093 - ERROR - Ошибка при подключении к NetBox API: HTTPSConnectionPool(host='netbox.istranet.lan', port=443): Max retries exceeded with url: /api/status/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))
+2025-03-06 22:38:11,094 - ERROR - Не удалось подключиться к NetBox API. Бот не запущен.
+2025-03-06 22:38:22,486 - INFO - Запуск FastAPI и бота...
+2025-03-06 22:38:22,504 - ERROR - Ошибка при подключении к NetBox API: HTTPSConnectionPool(host='netbox.istranet.lan', port=443): Max retries exceeded with url: /api/status/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))
+2025-03-06 22:38:22,506 - ERROR - Не удалось подключиться к NetBox API. Бот не запущен.
+2025-03-06 22:38:30,633 - INFO - Запуск FastAPI и бота...
+2025-03-06 22:38:30,647 - ERROR - Ошибка при подключении к NetBox API: HTTPSConnectionPool(host='netbox.istranet.lan', port=443): Max retries exceeded with url: /api/status/ (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))
+2025-03-06 22:38:30,647 - ERROR - Не удалось подключиться к NetBox API. Бот не запущен.
+2025-03-06 22:43:42,679 - INFO - Запуск FastAPI и бота...
+2025-03-06 22:43:42,801 - INFO - Подключение к NetBox API успешно.
+2025-03-06 22:43:42,801 - INFO - Бот запущен.
+2025-03-06 22:43:42,801 - INFO - Start polling
+2025-03-06 22:43:42,955 - INFO - Run polling for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-06 22:43:47,077 - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-03-06 22:43:47,077 - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7499098518)
+2025-03-06 22:43:52,269 - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-03-06 22:43:52,269 - WARNING - Sleep for 1.368805 seconds and try again... (tryings = 1, bot id = 7499098518)
+2025-03-06 22:43:57,933 - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-03-06 22:43:57,933 - WARNING - Sleep for 1.847244 seconds and try again... (tryings = 2, bot id = 7499098518)
+2025-03-06 22:44:03,854 - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-03-06 22:44:03,854 - WARNING - Sleep for 2.458777 seconds and try again... (tryings = 3, bot id = 7499098518)
+2025-03-06 22:44:10,404 - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-03-06 22:44:10,404 - WARNING - Sleep for 3.185043 seconds and try again... (tryings = 4, bot id = 7499098518)
+2025-03-06 22:44:17,686 - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-03-06 22:44:17,686 - WARNING - Sleep for 4.133838 seconds and try again... (tryings = 5, bot id = 7499098518)
+2025-03-06 22:44:25,917 - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-03-06 22:44:25,917 - WARNING - Sleep for 4.905304 seconds and try again... (tryings = 6, bot id = 7499098518)
+2025-03-06 22:44:35,083 - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-03-06 22:44:35,083 - WARNING - Sleep for 5.015211 seconds and try again... (tryings = 7, bot id = 7499098518)
+2025-03-06 22:44:44,671 - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-03-06 22:44:44,671 - WARNING - Sleep for 4.993957 seconds and try again... (tryings = 8, bot id = 7499098518)
+2025-03-06 22:44:45,380 - INFO - Polling stopped for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-06 22:44:45,380 - INFO - Polling stopped
+2025-03-06 22:46:26,409 - INFO - Запуск FastAPI и бота...
+2025-03-06 22:46:27,426 - INFO - Подключение к NetBox API успешно.
+2025-03-06 22:46:27,428 - INFO - Бот запущен.
+2025-03-06 22:46:27,428 - INFO - Start polling
+2025-03-06 22:46:27,576 - INFO - Run polling for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-06 22:46:31,672 - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-03-06 22:46:31,672 - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7499098518)
+2025-03-06 22:46:36,796 - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-03-06 22:46:36,796 - WARNING - Sleep for 1.220428 seconds and try again... (tryings = 1, bot id = 7499098518)
+2025-03-06 22:46:42,131 - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-03-06 22:46:42,131 - WARNING - Sleep for 1.421695 seconds and try again... (tryings = 2, bot id = 7499098518)
+2025-03-06 22:46:44,276 - INFO - Polling stopped for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-06 22:46:44,276 - INFO - Polling stopped
+2025-03-06 22:47:06,677 - INFO - Запуск FastAPI и бота...
+2025-03-06 22:47:06,750 - INFO - Подключение к NetBox API успешно.
+2025-03-06 22:47:06,750 - INFO - Бот запущен.
+2025-03-06 22:47:06,750 - INFO - Start polling
+2025-03-06 22:47:06,757 - INFO - Polling stopped
+2025-03-06 22:49:29,660 - INFO - Запуск FastAPI и бота...
+2025-03-06 22:49:29,790 - INFO - Подключение к NetBox API успешно.
+2025-03-06 22:49:29,806 - INFO - Бот запущен.
+2025-03-06 22:49:29,806 - INFO - Start polling
+2025-03-06 22:49:29,806 - INFO - Polling stopped
+2025-03-06 23:01:02,634 - INFO - Запуск FastAPI и бота...
+2025-03-06 23:01:02,783 - INFO - Подключение к NetBox API успешно.
+2025-03-06 23:01:02,783 - INFO - Бот запущен.
+2025-03-06 23:01:02,783 - INFO - Start polling
+2025-03-06 23:01:02,947 - INFO - Run polling for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-06 23:01:27,478 - INFO - Update id=944033283 is handled. Duration 171 ms by bot id=7499098518
+2025-03-06 23:01:29,463 - INFO - Update id=944033284 is not handled. Duration 16 ms by bot id=7499098518
+2025-03-06 23:01:29,464 - ERROR - Cause exception while process update id=944033284 by bot id=7499098518
+SSLError: HTTPSConnectionPool(host='netbox.istranet.lan', port=443): Max retries exceeded with url: /api/dcim/devices/?q=DWDM_A2 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))
+Traceback (most recent call last):
+  File "C:\Users\makis\OneDrive\Документы\netbox_search_bot\.venv\Lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\makis\OneDrive\Документы\netbox_search_bot\.venv\Lib\site-packages\urllib3\connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "C:\Users\makis\OneDrive\Документы\netbox_search_bot\.venv\Lib\site-packages\urllib3\connection.py", line 741, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\OneDrive\Документы\netbox_search_bot\.venv\Lib\site-packages\urllib3\connection.py", line 920, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\OneDrive\Документы\netbox_search_bot\.venv\Lib\site-packages\urllib3\util\ssl_.py", line 460, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\OneDrive\Документы\netbox_search_bot\.venv\Lib\site-packages\urllib3\util\ssl_.py", line 504, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2544.0_x64__qbz5n2kfra8p0\Lib\ssl.py", line 455, in wrap_socket
+    return self.sslsocket_class._create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2544.0_x64__qbz5n2kfra8p0\Lib\ssl.py", line 1041, in _create
+    self.do_handshake()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2544.0_x64__qbz5n2kfra8p0\Lib\ssl.py", line 1319, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\makis\OneDrive\Документы\netbox_search_bot\.venv\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\OneDrive\Документы\netbox_search_bot\.venv\Lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+urllib3.exceptions.SSLError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\makis\OneDrive\Документы\netbox_search_bot\.venv\Lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\makis\OneDrive\Документы\netbox_search_bot\.venv\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\OneDrive\Документы\netbox_search_bot\.venv\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='netbox.istranet.lan', port=443): Max retries exceeded with url: /api/dcim/devices/?q=DWDM_A2 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\makis\OneDrive\Документы\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\OneDrive\Документы\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\OneDrive\Документы\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\OneDrive\Документы\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\OneDrive\Документы\netbox_search_bot\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\OneDrive\Документы\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\OneDrive\Документы\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\makis\OneDrive\Документы\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\OneDrive\Документы\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\OneDrive\Документы\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\OneDrive\Документы\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\OneDrive\Документы\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\OneDrive\Документы\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\makis\OneDrive\Документы\netbox_search_bot\app\bot.py", line 35, in search
+    devices = netbox_client.search_devices(query)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\OneDrive\Документы\netbox_search_bot\app\netbox_client.py", line 48, in search_devices
+    response = requests.get(url, headers=self.headers)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\OneDrive\Документы\netbox_search_bot\.venv\Lib\site-packages\requests\api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\OneDrive\Документы\netbox_search_bot\.venv\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\OneDrive\Документы\netbox_search_bot\.venv\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\OneDrive\Документы\netbox_search_bot\.venv\Lib\site-packages\requests\sessions.py", line 724, in send
+    history = [resp for resp in gen]
+                                ^^^
+  File "C:\Users\makis\OneDrive\Документы\netbox_search_bot\.venv\Lib\site-packages\requests\sessions.py", line 265, in resolve_redirects
+    resp = self.send(
+           ^^^^^^^^^^
+  File "C:\Users\makis\OneDrive\Документы\netbox_search_bot\.venv\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\OneDrive\Документы\netbox_search_bot\.venv\Lib\site-packages\requests\adapters.py", line 698, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='netbox.istranet.lan', port=443): Max retries exceeded with url: /api/dcim/devices/?q=DWDM_A2 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))
+2025-03-06 23:02:23,517 - INFO - Polling stopped for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-06 23:02:23,518 - INFO - Polling stopped
