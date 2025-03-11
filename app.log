@@ -186,3 +186,1662 @@ Traceback (most recent call last):
 requests.exceptions.SSLError: HTTPSConnectionPool(host='netbox.istranet.lan', port=443): Max retries exceeded with url: /api/dcim/devices/?q=DWDM_A2 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))
 2025-03-06 23:02:23,517 - INFO - Polling stopped for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
 2025-03-06 23:02:23,518 - INFO - Polling stopped
+2025-03-07 18:20:59,623 - INFO - Запуск FastAPI и бота...
+2025-03-07 18:20:59,744 - INFO - Подключение к NetBox API успешно.
+2025-03-07 18:20:59,749 - INFO - Бот запущен.
+2025-03-07 18:20:59,750 - INFO - Start polling
+2025-03-07 18:20:59,906 - INFO - Run polling for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-07 18:22:13,370 - INFO - Update id=944033285 is handled. Duration 234 ms by bot id=7499098518
+2025-03-07 18:22:23,258 - INFO - Update id=944033286 is not handled. Duration 15 ms by bot id=7499098518
+2025-03-07 18:22:23,259 - ERROR - Cause exception while process update id=944033286 by bot id=7499098518
+SSLError: HTTPSConnectionPool(host='netbox.istranet.lan', port=443): Max retries exceeded with url: /api/dcim/devices/?q=DWDM_A2 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))
+Traceback (most recent call last):
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\urllib3\connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\urllib3\connection.py", line 741, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\urllib3\connection.py", line 920, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\urllib3\util\ssl_.py", line 460, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\urllib3\util\ssl_.py", line 504, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2544.0_x64__qbz5n2kfra8p0\Lib\ssl.py", line 455, in wrap_socket
+    return self.sslsocket_class._create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2544.0_x64__qbz5n2kfra8p0\Lib\ssl.py", line 1041, in _create
+    self.do_handshake()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2544.0_x64__qbz5n2kfra8p0\Lib\ssl.py", line 1319, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+urllib3.exceptions.SSLError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='netbox.istranet.lan', port=443): Max retries exceeded with url: /api/dcim/devices/?q=DWDM_A2 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\app\bot.py", line 35, in search
+    devices = netbox_client.search_devices(query)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\app\netbox_client.py", line 48, in search_devices
+    response = requests.get(url, headers=self.headers)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\requests\api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\requests\sessions.py", line 724, in send
+    history = [resp for resp in gen]
+                                ^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\requests\sessions.py", line 265, in resolve_redirects
+    resp = self.send(
+           ^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\requests\adapters.py", line 698, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='netbox.istranet.lan', port=443): Max retries exceeded with url: /api/dcim/devices/?q=DWDM_A2 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))
+2025-03-07 20:47:53,205 - INFO - Polling stopped
+2025-03-07 20:47:53,205 - INFO - Polling stopped for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-07 20:48:17,920 - INFO - Запуск FastAPI и бота...
+2025-03-07 20:48:18,046 - INFO - Подключение к NetBox API успешно.
+2025-03-07 20:48:18,047 - INFO - Бот запущен.
+2025-03-07 20:48:18,047 - INFO - Start polling
+2025-03-07 20:48:18,195 - INFO - Run polling for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-07 20:48:24,556 - INFO - Update id=944033287 is handled. Duration 203 ms by bot id=7499098518
+2025-03-07 20:48:31,505 - INFO - Update id=944033288 is not handled. Duration 0 ms by bot id=7499098518
+2025-03-07 20:48:31,505 - ERROR - Cause exception while process update id=944033288 by bot id=7499098518
+OSError: Could not find a suitable TLS CA certificate bundle, invalid path: ./cert/Istranet_ca_ec.crt
+Traceback (most recent call last):
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\app\bot.py", line 35, in search
+    devices = netbox_client.search_devices(query)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\app\netbox_client.py", line 45, in search_devices
+    response = requests.get(url, headers=self.headers, verify="./cert/Istranet_ca_ec.crt")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\requests\api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\requests\adapters.py", line 639, in send
+    self.cert_verify(conn, request.url, verify, cert)
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\requests\adapters.py", line 328, in cert_verify
+    raise OSError(
+OSError: Could not find a suitable TLS CA certificate bundle, invalid path: ./cert/Istranet_ca_ec.crt
+2025-03-07 20:48:46,032 - INFO - Polling stopped
+2025-03-07 20:48:46,033 - INFO - Polling stopped for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-07 20:48:52,205 - INFO - Запуск FastAPI и бота...
+2025-03-07 20:48:52,274 - INFO - Подключение к NetBox API успешно.
+2025-03-07 20:48:52,275 - INFO - Бот запущен.
+2025-03-07 20:48:52,275 - INFO - Start polling
+2025-03-07 20:48:52,430 - INFO - Run polling for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-07 20:48:57,330 - INFO - Update id=944033289 is handled. Duration 234 ms by bot id=7499098518
+2025-03-07 20:49:02,043 - INFO - Update id=944033290 is not handled. Duration 0 ms by bot id=7499098518
+2025-03-07 20:49:02,043 - ERROR - Cause exception while process update id=944033290 by bot id=7499098518
+OSError: Could not find a suitable TLS CA certificate bundle, invalid path: cert/Istranet_ca_ec.crt
+Traceback (most recent call last):
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\app\bot.py", line 35, in search
+    devices = netbox_client.search_devices(query)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\app\netbox_client.py", line 45, in search_devices
+    response = requests.get(url, headers=self.headers, verify="cert/Istranet_ca_ec.crt")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\requests\api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\requests\adapters.py", line 639, in send
+    self.cert_verify(conn, request.url, verify, cert)
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\requests\adapters.py", line 328, in cert_verify
+    raise OSError(
+OSError: Could not find a suitable TLS CA certificate bundle, invalid path: cert/Istranet_ca_ec.crt
+2025-03-07 20:49:23,281 - INFO - Polling stopped
+2025-03-07 20:49:23,281 - INFO - Polling stopped for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-07 20:49:31,067 - INFO - Запуск FastAPI и бота...
+2025-03-07 20:49:31,184 - INFO - Подключение к NetBox API успешно.
+2025-03-07 20:49:31,184 - INFO - Бот запущен.
+2025-03-07 20:49:31,184 - INFO - Start polling
+2025-03-07 20:49:31,348 - INFO - Run polling for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-07 20:49:33,764 - INFO - Update id=944033291 is not handled. Duration 0 ms by bot id=7499098518
+2025-03-07 20:49:33,764 - ERROR - Cause exception while process update id=944033291 by bot id=7499098518
+SSLError: HTTPSConnectionPool(host='netbox.istranet.lan', port=443): Max retries exceeded with url: /api/dcim/devices/?q=DWDM_A2 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))
+Traceback (most recent call last):
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\urllib3\connectionpool.py", line 464, in _make_request
+    self._validate_conn(conn)
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\urllib3\connectionpool.py", line 1093, in _validate_conn
+    conn.connect()
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\urllib3\connection.py", line 741, in connect
+    sock_and_verified = _ssl_wrap_socket_and_match_hostname(
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\urllib3\connection.py", line 920, in _ssl_wrap_socket_and_match_hostname
+    ssl_sock = ssl_wrap_socket(
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\urllib3\util\ssl_.py", line 460, in ssl_wrap_socket
+    ssl_sock = _ssl_wrap_socket_impl(sock, context, tls_in_tls, server_hostname)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\urllib3\util\ssl_.py", line 504, in _ssl_wrap_socket_impl
+    return ssl_context.wrap_socket(sock, server_hostname=server_hostname)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2544.0_x64__qbz5n2kfra8p0\Lib\ssl.py", line 455, in wrap_socket
+    return self.sslsocket_class._create(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2544.0_x64__qbz5n2kfra8p0\Lib\ssl.py", line 1041, in _create
+    self.do_handshake()
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2544.0_x64__qbz5n2kfra8p0\Lib\ssl.py", line 1319, in do_handshake
+    self._sslobj.do_handshake()
+ssl.SSLCertVerificationError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\urllib3\connectionpool.py", line 787, in urlopen
+    response = self._make_request(
+               ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\urllib3\connectionpool.py", line 488, in _make_request
+    raise new_e
+urllib3.exceptions.SSLError: [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\requests\adapters.py", line 667, in send
+    resp = conn.urlopen(
+           ^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\urllib3\connectionpool.py", line 841, in urlopen
+    retries = retries.increment(
+              ^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\urllib3\util\retry.py", line 519, in increment
+    raise MaxRetryError(_pool, url, reason) from reason  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='netbox.istranet.lan', port=443): Max retries exceeded with url: /api/dcim/devices/?q=DWDM_A2 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\app\bot.py", line 35, in search
+    devices = netbox_client.search_devices(query)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\app\netbox_client.py", line 45, in search_devices
+    response = requests.get(url, headers=self.headers, verify="app/cert/Istranet_ca_ec.crt")
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\requests\api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\requests\sessions.py", line 589, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\requests\sessions.py", line 703, in send
+    r = adapter.send(request, **kwargs)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\requests\adapters.py", line 698, in send
+    raise SSLError(e, request=request)
+requests.exceptions.SSLError: HTTPSConnectionPool(host='netbox.istranet.lan', port=443): Max retries exceeded with url: /api/dcim/devices/?q=DWDM_A2 (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')))
+2025-03-07 20:49:44,271 - INFO - Polling stopped
+2025-03-07 20:49:44,271 - INFO - Polling stopped for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-07 20:50:07,211 - INFO - Запуск FastAPI и бота...
+2025-03-07 20:50:07,211 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-3' coro=<start_bot() done, defined at C:\Users\makis\Desktop\netbox_search_bot\app\bot.py:43> exception=AttributeError("'NetBoxClient' object has no attribute 'check_connection'")>
+Traceback (most recent call last):
+  File "C:\Users\makis\Desktop\netbox_search_bot\app\bot.py", line 45, in start_bot
+    if netbox_client.check_connection():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NetBoxClient' object has no attribute 'check_connection'
+2025-03-07 20:50:49,057 - INFO - Запуск FastAPI и бота...
+2025-03-07 20:50:49,057 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-3' coro=<start_bot() done, defined at C:\Users\makis\Desktop\netbox_search_bot\app\bot.py:43> exception=AttributeError("'NetBoxClient' object has no attribute 'check_connection'")>
+Traceback (most recent call last):
+  File "C:\Users\makis\Desktop\netbox_search_bot\app\bot.py", line 45, in start_bot
+    if netbox_client.check_connection():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NetBoxClient' object has no attribute 'check_connection'
+2025-03-07 20:52:17,790 - INFO - Запуск FastAPI и бота...
+2025-03-07 20:52:17,924 - INFO - Подключение к NetBox API успешно.
+2025-03-07 20:52:17,925 - INFO - Бот запущен.
+2025-03-07 20:52:17,925 - INFO - Start polling
+2025-03-07 20:52:18,062 - INFO - Run polling for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-07 20:52:19,756 - INFO - Update id=944033292 is handled. Duration 1625 ms by bot id=7499098518
+2025-03-07 20:52:19,757 - INFO - Update id=944033293 is handled. Duration 702 ms by bot id=7499098518
+2025-03-07 20:52:19,788 - INFO - Update id=944033297 is handled. Duration 202 ms by bot id=7499098518
+2025-03-07 20:52:19,806 - INFO - Update id=944033296 is handled. Duration 219 ms by bot id=7499098518
+2025-03-07 20:52:19,826 - INFO - Update id=944033295 is handled. Duration 234 ms by bot id=7499098518
+2025-03-07 20:52:19,859 - INFO - Update id=944033294 is handled. Duration 531 ms by bot id=7499098518
+2025-03-07 20:52:20,059 - INFO - Update id=944033299 is handled. Duration 469 ms by bot id=7499098518
+2025-03-07 20:52:20,116 - INFO - Update id=944033298 is handled. Duration 531 ms by bot id=7499098518
+2025-03-07 20:52:47,340 - INFO - Update id=944033300 is handled. Duration 436 ms by bot id=7499098518
+2025-03-07 21:50:26,016 - INFO - Update id=944033301 is handled. Duration 750 ms by bot id=7499098518
+2025-03-07 21:56:19,077 - INFO - Polling stopped
+2025-03-07 21:56:19,077 - INFO - Polling stopped for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-07 21:57:30,478 - INFO - Запуск FastAPI и бота...
+2025-03-07 21:57:30,705 - INFO - Подключение к NetBox API успешно.
+2025-03-07 21:57:30,721 - INFO - Бот запущен.
+2025-03-07 21:57:30,721 - INFO - Start polling
+2025-03-07 21:57:30,881 - INFO - Run polling for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-07 21:57:37,056 - INFO - Polling stopped for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-07 21:57:37,056 - INFO - Polling stopped
+2025-03-07 21:57:52,741 - INFO - Запуск FastAPI и бота...
+2025-03-07 21:57:52,741 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-3' coro=<start_bot() done, defined at C:\Users\makis\Desktop\netbox_search_bot\app\bot.py:78> exception=AttributeError("'NetBoxClient' object has no attribute 'check_connection'")>
+Traceback (most recent call last):
+  File "C:\Users\makis\Desktop\netbox_search_bot\app\bot.py", line 80, in start_bot
+    if netbox_client.check_connection():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NetBoxClient' object has no attribute 'check_connection'
+2025-03-07 22:02:45,856 - INFO - Запуск FastAPI и бота...
+2025-03-07 22:02:46,298 - INFO - Подключение к NetBox API успешно.
+2025-03-07 22:02:46,299 - INFO - Бот запущен.
+2025-03-07 22:02:46,300 - INFO - Start polling
+2025-03-07 22:02:46,448 - INFO - Run polling for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-07 22:02:46,785 - INFO - Update id=944033302 is not handled. Duration 280 ms by bot id=7499098518
+2025-03-07 22:02:46,785 - ERROR - Cause exception while process update id=944033302 by bot id=7499098518
+AttributeError: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\app\bot.py", line 36, in search
+    devices = netbox_client.search_devices(query)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\app\netbox_client.py", line 62, in search_devices
+    "location": device.get("location", {}).get("name", "N/A"),
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-03-07 22:02:46,798 - INFO - Update id=944033305 is not handled. Duration 0 ms by bot id=7499098518
+2025-03-07 22:02:47,089 - INFO - Update id=944033306 is not handled. Duration 280 ms by bot id=7499098518
+2025-03-07 22:02:47,089 - ERROR - Cause exception while process update id=944033306 by bot id=7499098518
+AttributeError: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\app\bot.py", line 36, in search
+    devices = netbox_client.search_devices(query)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\app\netbox_client.py", line 62, in search_devices
+    "location": device.get("location", {}).get("name", "N/A"),
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-03-07 22:02:47,274 - INFO - Update id=944033304 is handled. Duration 468 ms by bot id=7499098518
+2025-03-07 22:02:47,286 - INFO - Update id=944033303 is handled. Duration 500 ms by bot id=7499098518
+2025-03-07 22:02:55,888 - INFO - Update id=944033307 is not handled. Duration 250 ms by bot id=7499098518
+2025-03-07 22:02:55,888 - ERROR - Cause exception while process update id=944033307 by bot id=7499098518
+AttributeError: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\app\bot.py", line 36, in search
+    devices = netbox_client.search_devices(query)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\app\netbox_client.py", line 62, in search_devices
+    "location": device.get("location", {}).get("name", "N/A"),
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-03-07 22:05:49,028 - INFO - Polling stopped
+2025-03-07 22:05:49,028 - INFO - Polling stopped for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-07 22:06:49,967 - INFO - Запуск FastAPI и бота...
+2025-03-07 22:06:49,967 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-3' coro=<start_bot() done, defined at C:\Users\makis\Desktop\netbox_search_bot\app\bot.py:75> exception=AttributeError("'NetBoxClient' object has no attribute 'check_connection'")>
+Traceback (most recent call last):
+  File "C:\Users\makis\Desktop\netbox_search_bot\app\bot.py", line 77, in start_bot
+    if netbox_client.check_connection():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NetBoxClient' object has no attribute 'check_connection'
+2025-03-07 22:08:36,682 - INFO - Запуск FastAPI и бота...
+2025-03-07 22:08:36,811 - INFO - Подключение к NetBox API успешно.
+2025-03-07 22:08:36,811 - INFO - Бот запущен.
+2025-03-07 22:08:36,811 - INFO - Start polling
+2025-03-07 22:08:36,976 - INFO - Run polling for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-07 22:08:37,273 - INFO - Update id=944033308 is handled. Duration 235 ms by bot id=7499098518
+2025-03-07 22:08:37,274 - INFO - Update id=944033310 is handled. Duration 235 ms by bot id=7499098518
+2025-03-07 22:08:37,297 - INFO - Update id=944033311 is handled. Duration 266 ms by bot id=7499098518
+2025-03-07 22:08:37,354 - INFO - Update id=944033309 is handled. Duration 313 ms by bot id=7499098518
+2025-03-07 22:08:50,065 - INFO - Update id=944033312 is not handled. Duration 952 ms by bot id=7499098518
+2025-03-07 22:08:50,065 - ERROR - Cause exception while process update id=944033312 by bot id=7499098518
+AttributeError: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\app\bot.py", line 36, in search
+    devices = netbox_client.search_devices(query)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\app\netbox_client.py", line 62, in search_devices
+    "location": device.get("location", {}).get("name", "N/A"),
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-03-07 22:09:20,928 - INFO - Polling stopped
+2025-03-07 22:09:20,928 - INFO - Polling stopped for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-07 22:09:30,445 - INFO - Запуск FastAPI и бота...
+2025-03-07 22:09:30,512 - INFO - Подключение к NetBox API успешно.
+2025-03-07 22:09:30,513 - INFO - Бот запущен.
+2025-03-07 22:09:30,513 - INFO - Start polling
+2025-03-07 22:09:30,663 - INFO - Run polling for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-07 22:09:39,653 - INFO - Update id=944033313 is not handled. Duration 375 ms by bot id=7499098518
+2025-03-07 22:09:39,653 - ERROR - Cause exception while process update id=944033313 by bot id=7499098518
+AttributeError: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\app\bot.py", line 36, in search
+    devices = netbox_client.search_devices(query)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\app\netbox_client.py", line 62, in search_devices
+    "location": device.get("location", {}).get("name", "N/A"),
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-03-07 22:09:50,478 - INFO - Update id=944033314 is not handled. Duration 218 ms by bot id=7499098518
+2025-03-07 22:09:50,479 - ERROR - Cause exception while process update id=944033314 by bot id=7499098518
+AttributeError: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\app\bot.py", line 36, in search
+    devices = netbox_client.search_devices(query)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\app\netbox_client.py", line 62, in search_devices
+    "location": device.get("location", {}).get("name", "N/A"),
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-03-07 22:09:54,827 - INFO - Polling stopped for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-07 22:09:54,827 - INFO - Polling stopped
+2025-03-07 22:10:58,857 - INFO - Запуск FastAPI и бота...
+2025-03-07 22:10:58,857 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-3' coro=<start_bot() done, defined at C:\Users\makis\Desktop\netbox_search_bot\app\bot.py:75> exception=AttributeError("'NetBoxClient' object has no attribute 'check_connection'")>
+Traceback (most recent call last):
+  File "C:\Users\makis\Desktop\netbox_search_bot\app\bot.py", line 77, in start_bot
+    if netbox_client.check_connection():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NetBoxClient' object has no attribute 'check_connection'
+2025-03-07 22:12:47,909 - INFO - Запуск FastAPI и бота...
+2025-03-07 22:12:48,046 - INFO - Подключение к NetBox API успешно.
+2025-03-07 22:12:48,047 - INFO - Бот запущен.
+2025-03-07 22:12:48,047 - INFO - Start polling
+2025-03-07 22:12:49,338 - INFO - Run polling for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-07 22:12:49,755 - INFO - Update id=944033315 is not handled. Duration 359 ms by bot id=7499098518
+2025-03-07 22:12:49,755 - ERROR - Cause exception while process update id=944033315 by bot id=7499098518
+AttributeError: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\app\bot.py", line 36, in search
+    devices = netbox_client.search_devices(query)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\app\netbox_client.py", line 62, in search_devices
+    "location": device.get("location", {}).get("name", "N/A"),
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-03-07 22:12:49,988 - INFO - Update id=944033316 is handled. Duration 234 ms by bot id=7499098518
+2025-03-07 22:15:11,594 - INFO - Update id=944033317 is handled. Duration 77 ms by bot id=7499098518
+2025-03-07 22:15:11,741 - INFO - Polling stopped for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-07 22:15:11,741 - INFO - Polling stopped
+2025-03-07 22:15:16,574 - INFO - Запуск FastAPI и бота...
+2025-03-07 22:15:16,574 - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-3' coro=<start_bot() done, defined at C:\Users\makis\Desktop\netbox_search_bot\app\bot.py:75> exception=AttributeError("'NetBoxClient' object has no attribute 'check_connection'")>
+Traceback (most recent call last):
+  File "C:\Users\makis\Desktop\netbox_search_bot\app\bot.py", line 77, in start_bot
+    if netbox_client.check_connection():
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NetBoxClient' object has no attribute 'check_connection'
+2025-03-07 22:16:52,786 - INFO - Запуск FastAPI и бота...
+2025-03-07 22:16:52,888 - INFO - Подключение к NetBox API успешно.
+2025-03-07 22:16:52,889 - INFO - Бот запущен.
+2025-03-07 22:16:52,889 - INFO - Start polling
+2025-03-07 22:16:53,036 - INFO - Run polling for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-07 22:16:53,352 - INFO - Update id=944033318 is not handled. Duration 250 ms by bot id=7499098518
+2025-03-07 22:16:53,352 - ERROR - Cause exception while process update id=944033318 by bot id=7499098518
+AttributeError: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\app\bot.py", line 36, in search
+    devices = netbox_client.search_devices(query)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\app\netbox_client.py", line 62, in search_devices
+    "location": device.get("location", {}).get("name", "N/A"),
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-03-07 22:16:53,578 - INFO - Update id=944033320 is handled. Duration 234 ms by bot id=7499098518
+2025-03-07 22:16:53,622 - INFO - Update id=944033319 is handled. Duration 265 ms by bot id=7499098518
+2025-03-07 22:16:58,004 - INFO - Update id=944033321 is handled. Duration 125 ms by bot id=7499098518
+2025-03-07 22:17:07,242 - INFO - Update id=944033322 is not handled. Duration 0 ms by bot id=7499098518
+2025-03-07 22:17:13,606 - INFO - Update id=944033323 is not handled. Duration 234 ms by bot id=7499098518
+2025-03-07 22:17:13,606 - ERROR - Cause exception while process update id=944033323 by bot id=7499098518
+AttributeError: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\app\bot.py", line 36, in search
+    devices = netbox_client.search_devices(query)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\app\netbox_client.py", line 62, in search_devices
+    "location": device.get("location", {}).get("name", "N/A"),
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-03-07 22:17:20,488 - INFO - Update id=944033324 is handled. Duration 93 ms by bot id=7499098518
+2025-03-07 22:17:23,929 - INFO - Update id=944033325 is not handled. Duration 0 ms by bot id=7499098518
+2025-03-07 22:17:27,891 - INFO - Update id=944033326 is not handled. Duration 15 ms by bot id=7499098518
+2025-03-07 22:17:28,634 - INFO - Update id=944033327 is not handled. Duration 0 ms by bot id=7499098518
+2025-03-07 22:17:29,899 - INFO - Update id=944033328 is not handled. Duration 0 ms by bot id=7499098518
+2025-03-07 22:17:31,656 - INFO - Update id=944033329 is not handled. Duration 14 ms by bot id=7499098518
+2025-03-07 22:17:32,568 - INFO - Update id=944033330 is not handled. Duration 0 ms by bot id=7499098518
+2025-03-07 22:17:32,906 - INFO - Update id=944033331 is not handled. Duration 0 ms by bot id=7499098518
+2025-03-07 22:17:33,143 - INFO - Update id=944033332 is not handled. Duration 0 ms by bot id=7499098518
+2025-03-07 22:17:33,332 - INFO - Update id=944033333 is not handled. Duration 0 ms by bot id=7499098518
+2025-03-07 22:17:33,536 - INFO - Update id=944033334 is not handled. Duration 0 ms by bot id=7499098518
+2025-03-07 22:17:33,747 - INFO - Update id=944033335 is not handled. Duration 0 ms by bot id=7499098518
+2025-03-07 22:17:33,956 - INFO - Update id=944033336 is not handled. Duration 0 ms by bot id=7499098518
+2025-03-07 22:17:34,153 - INFO - Update id=944033337 is not handled. Duration 0 ms by bot id=7499098518
+2025-03-07 22:17:34,413 - INFO - Update id=944033338 is not handled. Duration 0 ms by bot id=7499098518
+2025-03-07 22:17:34,647 - INFO - Update id=944033339 is not handled. Duration 0 ms by bot id=7499098518
+2025-03-07 22:17:34,860 - INFO - Update id=944033340 is not handled. Duration 0 ms by bot id=7499098518
+2025-03-07 22:17:35,106 - INFO - Update id=944033341 is not handled. Duration 0 ms by bot id=7499098518
+2025-03-07 22:17:35,371 - INFO - Update id=944033342 is not handled. Duration 0 ms by bot id=7499098518
+2025-03-07 22:17:35,552 - INFO - Update id=944033343 is not handled. Duration 0 ms by bot id=7499098518
+2025-03-07 22:17:51,507 - INFO - Update id=944033344 is handled. Duration 77 ms by bot id=7499098518
+2025-03-07 22:18:02,199 - INFO - Update id=944033345 is not handled. Duration 327 ms by bot id=7499098518
+2025-03-07 22:18:02,200 - ERROR - Cause exception while process update id=944033345 by bot id=7499098518
+AttributeError: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\app\bot.py", line 36, in search
+    devices = netbox_client.search_devices(query)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\app\netbox_client.py", line 62, in search_devices
+    "location": device.get("location", {}).get("name", "N/A"),
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-03-07 22:18:24,382 - INFO - Polling stopped for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-07 22:18:24,382 - INFO - Polling stopped
+2025-03-07 22:18:31,191 - INFO - Запуск FastAPI и бота...
+2025-03-07 22:18:31,262 - INFO - Подключение к NetBox API успешно.
+2025-03-07 22:18:31,262 - INFO - Бот запущен.
+2025-03-07 22:18:31,263 - INFO - Start polling
+2025-03-07 22:18:31,436 - INFO - Run polling for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-07 22:18:38,705 - INFO - Update id=944033346 is handled. Duration 280 ms by bot id=7499098518
+2025-03-07 22:18:44,932 - INFO - Update id=944033347 is not handled. Duration 266 ms by bot id=7499098518
+2025-03-07 22:18:44,932 - ERROR - Cause exception while process update id=944033347 by bot id=7499098518
+AttributeError: 'NoneType' object has no attribute 'get'
+Traceback (most recent call last):
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\.venv\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\app\bot.py", line 36, in search
+    devices = netbox_client.search_devices(query)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\makis\Desktop\netbox_search_bot\app\netbox_client.py", line 62, in search_devices
+    "location": device.get("location", {}).get("name", "N/A"),
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'get'
+2025-03-07 22:25:15,549 - INFO - Polling stopped for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-07 22:25:15,550 - INFO - Polling stopped
+2025-03-07 22:28:25,749 - INFO - Запуск FastAPI и бота...
+2025-03-07 22:28:25,874 - INFO - Подключение к NetBox API успешно.
+2025-03-07 22:28:25,875 - INFO - Бот запущен.
+2025-03-07 22:28:25,875 - INFO - Start polling
+2025-03-07 22:28:26,023 - INFO - Run polling for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-07 22:28:27,735 - INFO - Update id=944033348 is handled. Duration 203 ms by bot id=7499098518
+2025-03-07 22:28:32,579 - ERROR - Неизвестная ошибка при поиске устройств: 'NoneType' object has no attribute 'get'
+2025-03-07 22:28:32,719 - INFO - Update id=944033349 is handled. Duration 422 ms by bot id=7499098518
+2025-03-07 22:28:48,914 - ERROR - Неизвестная ошибка при поиске устройств: 'NoneType' object has no attribute 'get'
+2025-03-07 22:28:48,984 - INFO - Update id=944033350 is handled. Duration 375 ms by bot id=7499098518
+2025-03-07 22:29:27,670 - ERROR - Неизвестная ошибка при поиске устройств: 'NoneType' object has no attribute 'get'
+2025-03-07 22:29:27,731 - INFO - Update id=944033351 is handled. Duration 375 ms by bot id=7499098518
+2025-03-07 22:30:19,451 - INFO - Polling stopped for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-07 22:30:19,451 - INFO - Polling stopped
+2025-03-07 22:30:24,301 - INFO - Запуск FastAPI и бота...
+2025-03-07 22:30:24,353 - INFO - Подключение к NetBox API успешно.
+2025-03-07 22:30:24,353 - INFO - Бот запущен.
+2025-03-07 22:30:24,353 - INFO - Start polling
+2025-03-07 22:30:24,519 - INFO - Run polling for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-07 22:30:57,835 - INFO - Polling stopped for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-07 22:30:57,835 - INFO - Polling stopped
+2025-03-07 22:31:06,225 - INFO - Запуск FastAPI и бота...
+2025-03-07 22:31:06,352 - INFO - Подключение к NetBox API успешно.
+2025-03-07 22:31:06,353 - INFO - Бот запущен.
+2025-03-07 22:31:06,353 - INFO - Start polling
+2025-03-07 22:31:06,501 - INFO - Run polling for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-07 22:31:11,723 - INFO - Update id=944033352 is handled. Duration 453 ms by bot id=7499098518
+2025-03-07 22:31:17,215 - ERROR - Неизвестная ошибка при поиске устройств: 'NoneType' object has no attribute 'get'
+2025-03-07 22:31:17,309 - INFO - Update id=944033353 is handled. Duration 327 ms by bot id=7499098518
+2025-03-07 22:32:49,349 - INFO - Update id=944033354 is handled. Duration 78 ms by bot id=7499098518
+2025-03-07 22:32:52,585 - INFO - Update id=944033355 is not handled. Duration 0 ms by bot id=7499098518
+2025-03-07 22:33:02,176 - ERROR - Неизвестная ошибка при поиске устройств: 'NoneType' object has no attribute 'get'
+2025-03-07 22:33:02,316 - INFO - Update id=944033356 is handled. Duration 389 ms by bot id=7499098518
+2025-03-07 22:33:09,937 - ERROR - Неизвестная ошибка при поиске устройств: 'NoneType' object has no attribute 'get'
+2025-03-07 22:33:10,029 - INFO - Update id=944033357 is handled. Duration 329 ms by bot id=7499098518
+2025-03-07 22:33:11,945 - ERROR - Неизвестная ошибка при поиске устройств: 'NoneType' object has no attribute 'get'
+2025-03-07 22:33:12,070 - INFO - Update id=944033358 is handled. Duration 327 ms by bot id=7499098518
+2025-03-07 22:33:13,300 - ERROR - Неизвестная ошибка при поиске устройств: 'NoneType' object has no attribute 'get'
+2025-03-07 22:33:13,507 - INFO - Update id=944033359 is handled. Duration 469 ms by bot id=7499098518
+2025-03-07 22:35:23,173 - INFO - Update id=944033360 is handled. Duration 93 ms by bot id=7499098518
+2025-03-07 22:48:37,495 - INFO - Запуск FastAPI и бота...
+2025-03-07 22:48:37,496 - ERROR - Ошибка при подключении к NetBox API: name 'requests' is not defined
+2025-03-07 22:48:37,496 - ERROR - Не удалось подключиться к NetBox API. Бот не запущен.
+2025-03-07 22:49:17,923 - INFO - Запуск FastAPI и бота...
+2025-03-07 22:49:18,028 - INFO - Подключение к NetBox API успешно.
+2025-03-07 22:49:18,029 - INFO - Бот запущен.
+2025-03-07 22:49:18,029 - INFO - Start polling
+2025-03-07 22:49:18,182 - INFO - Run polling for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-07 22:49:18,443 - INFO - Update id=944033361 is handled. Duration 203 ms by bot id=7499098518
+2025-03-07 22:49:18,457 - INFO - Update id=944033362 is handled. Duration 219 ms by bot id=7499098518
+2025-03-07 22:49:23,024 - INFO - Update id=944033363 is handled. Duration 62 ms by bot id=7499098518
+2025-03-07 22:49:27,538 - INFO - Update id=944033364 is not handled. Duration 0 ms by bot id=7499098518
+2025-03-07 22:49:39,826 - ERROR - Ошибка при поиске устройств: 'coroutine' object is not iterable
+2025-03-07 22:49:39,932 - INFO - Update id=944033365 is handled. Duration 109 ms by bot id=7499098518
+2025-03-07 22:51:05,344 - INFO - Polling stopped for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-07 22:51:05,345 - INFO - Polling stopped
+2025-03-07 22:51:09,831 - INFO - Запуск FastAPI и бота...
+2025-03-07 22:51:09,831 - ERROR - Ошибка при запуске бота: 'NetBoxClient' object has no attribute 'check_connection'
+2025-03-07 22:52:05,394 - INFO - Запуск FastAPI и бота...
+2025-03-07 22:52:05,394 - ERROR - Ошибка при запуске бота: 'NetBoxClient' object has no attribute 'check_connection'
+2025-03-07 22:55:05,476 - INFO - Запуск FastAPI и бота...
+2025-03-07 22:55:05,476 - ERROR - Ошибка при запуске бота: 'NetBoxClient' object has no attribute 'check_connection'
+2025-03-07 22:56:11,573 - INFO - Запуск FastAPI и бота...
+2025-03-07 22:56:11,588 - ERROR - Ошибка при подключении к NetBox API: [Errno 2] No such file or directory
+2025-03-07 22:56:11,588 - ERROR - Не удалось подключиться к NetBox API. Бот не запущен.
+2025-03-07 22:56:42,757 - INFO - Запуск FastAPI и бота...
+2025-03-07 22:56:42,758 - ERROR - Ошибка при подключении к NetBox API: [Errno 2] No such file or directory
+2025-03-07 22:56:42,758 - ERROR - Не удалось подключиться к NetBox API. Бот не запущен.
+2025-03-07 22:59:27,565 - INFO - Запуск FastAPI и бота...
+2025-03-07 22:59:27,591 - ERROR - Ошибка при подключении к NetBox API: Cannot connect to host netbox.istranet.lan:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2025-03-07 22:59:27,591 - ERROR - Не удалось подключиться к NetBox API. Бот не запущен.
+2025-03-07 23:00:04,466 - INFO - Запуск FastAPI и бота...
+2025-03-07 23:00:04,697 - ERROR - Ошибка подключения к NetBox API. Код ответа: 404
+2025-03-07 23:00:04,697 - ERROR - Не удалось подключиться к NetBox API. Бот не запущен.
+2025-03-11 19:33:27,157 - INFO - Запуск FastAPI и бота...
+2025-03-11 19:33:27,211 - ERROR - Ошибка подключения к NetBox API. Код ответа: 404
+2025-03-11 19:33:27,212 - ERROR - Не удалось подключиться к NetBox API. Бот не запущен.
+2025-03-11 19:34:15,235 - INFO - Запуск FastAPI и бота...
+2025-03-11 19:34:15,284 - ERROR - Ошибка подключения к NetBox API. Код ответа: 404
+2025-03-11 19:34:15,284 - ERROR - Не удалось подключиться к NetBox API. Бот не запущен.
+2025-03-11 19:41:09,859 - INFO - Запуск FastAPI и бота...
+2025-03-11 19:41:09,859 - ERROR - Ошибка при подключении к NetBox API: [Errno 2] No such file or directory
+2025-03-11 19:41:09,859 - ERROR - Не удалось подключиться к NetBox API. Бот не запущен.
+2025-03-11 19:41:28,236 - INFO - Запуск FastAPI и бота...
+2025-03-11 19:41:28,236 - ERROR - Ошибка при подключении к NetBox API: [Errno 2] No such file or directory
+2025-03-11 19:41:28,252 - ERROR - Не удалось подключиться к NetBox API. Бот не запущен.
+2025-03-11 19:41:46,039 - INFO - Запуск FastAPI и бота...
+2025-03-11 19:41:46,040 - ERROR - Ошибка при подключении к NetBox API: [Errno 2] No such file or directory
+2025-03-11 19:41:46,040 - ERROR - Не удалось подключиться к NetBox API. Бот не запущен.
+2025-03-11 19:43:43,646 - INFO - Запуск FastAPI и бота...
+2025-03-11 19:43:43,646 - ERROR - Ошибка при подключении к NetBox API: [Errno 2] No such file or directory
+2025-03-11 19:43:43,646 - ERROR - Не удалось подключиться к NetBox API. Бот не запущен.
+2025-03-11 19:48:08,246 - INFO - Запуск FastAPI и бота...
+2025-03-11 19:48:08,246 - ERROR - Ошибка при подключении к NetBox API: [Errno 2] No such file or directory
+2025-03-11 19:48:08,262 - ERROR - Не удалось подключиться к NetBox API. Бот не запущен.
+2025-03-11 19:58:55,138 - INFO - Запуск FastAPI и бота...
+2025-03-11 19:58:55,139 - ERROR - Ошибка при подключении к NetBox API: [Errno 2] No such file or directory
+2025-03-11 19:58:55,140 - ERROR - Не удалось подключиться к NetBox API. Бот не запущен.
+2025-03-11 19:59:23,146 - INFO - Приложение завершает работу.
+2025-03-11 19:59:26,911 - INFO - Запуск FastAPI и бота...
+2025-03-11 19:59:26,915 - ERROR - Ошибка при подключении к NetBox API: [Errno 2] No such file or directory
+2025-03-11 19:59:26,916 - ERROR - Не удалось подключиться к NetBox API. Бот не запущен.
+2025-03-11 19:59:31,034 - INFO - Приложение завершает работу.
+2025-03-11 19:59:34,817 - INFO - Запуск FastAPI и бота...
+2025-03-11 19:59:34,824 - ERROR - Ошибка при подключении к NetBox API: [Errno 2] No such file or directory
+2025-03-11 19:59:34,824 - ERROR - Не удалось подключиться к NetBox API. Бот не запущен.
+2025-03-11 20:12:29,032 - INFO - Приложение завершает работу.
+2025-03-11 20:12:56,671 - INFO - Запуск FastAPI и бота...
+2025-03-11 20:12:56,672 - ERROR - Ошибка при подключении к NetBox API: [Errno 2] No such file or directory
+2025-03-11 20:12:56,672 - ERROR - Не удалось подключиться к NetBox API. Бот не запущен.
+2025-03-11 20:13:00,085 - INFO - Приложение завершает работу.
+2025-03-11 21:08:41,256 - ERROR - Файл сертификата не найден: /rsa.crt
+2025-03-11 21:09:10,218 - ERROR - Файл сертификата не найден: /rsa.crt
+2025-03-11 21:10:37,170 - ERROR - Файл сертификата не найден: /rsa.crt
+2025-03-11 21:10:50,899 - ERROR - Файл сертификата не найден: /rsa.crt
+2025-03-11 21:11:08,430 - ERROR - Файл сертификата не найден: /rsa.crt
+2025-03-11 21:12:02,761 - ERROR - Файл сертификата не найден: /rsa.crt
+2025-03-11 21:12:06,534 - ERROR - Файл сертификата не найден: /rsa.crt
+2025-03-11 21:12:11,291 - ERROR - Файл сертификата не найден: /rsa.crt
+2025-03-11 21:12:16,024 - ERROR - Файл сертификата не найден: /rsa.crt
+2025-03-11 21:12:19,803 - ERROR - Файл сертификата не найден: /rsa.crt
+2025-03-11 21:12:23,568 - ERROR - Файл сертификата не найден: /rsa.crt
+2025-03-11 21:12:55,564 - ERROR - Файл сертификата не найден: /rsa.crt
+2025-03-11 21:12:59,369 - ERROR - Файл сертификата не найден: /rsa.crt
+2025-03-11 21:13:18,769 - ERROR - Файл сертификата не найден: /rsa.crt
+2025-03-11 21:13:27,759 - ERROR - Файл сертификата не найден: /rsa.crt
+2025-03-11 21:14:29,391 - ERROR - Файл сертификата не найден: /rsa.crt
+2025-03-11 21:15:35,981 - ERROR - Файл сертификата не найден: /self-signed.crt
+2025-03-11 21:17:02,855 - ERROR - Файл сертификата не найден: /self-signed.crt
+2025-03-11 21:17:22,052 - INFO - Запуск FastAPI и бота...
+2025-03-11 21:17:22,082 - ERROR - Ошибка при подключении к NetBox API: Cannot connect to host netbox.istranet.lan:443 ssl:True [SSLCertVerificationError: (1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1010)')]
+2025-03-11 21:17:22,082 - ERROR - Не удалось подключиться к NetBox API. Бот не запущен.
+2025-03-11 21:17:51,340 - INFO - Приложение завершает работу.
+2025-03-11 21:18:07,494 - INFO - Запуск FastAPI и бота...
+2025-03-11 21:18:07,577 - INFO - Подключение к NetBox API успешно.
+2025-03-11 21:18:07,577 - INFO - Бот запущен.
+2025-03-11 21:18:07,578 - INFO - Start polling
+2025-03-11 21:18:07,727 - INFO - Run polling for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-11 21:18:08,201 - INFO - Update id=944033372 is handled. Duration 406 ms by bot id=7499098518
+2025-03-11 21:18:08,223 - INFO - Update id=944033371 is handled. Duration 438 ms by bot id=7499098518
+2025-03-11 21:18:21,498 - ERROR - Неизвестная ошибка при поиске устройств: 'NoneType' object has no attribute 'get'
+2025-03-11 21:18:21,581 - INFO - Update id=944033373 is handled. Duration 327 ms by bot id=7499098518
+2025-03-11 21:18:50,670 - ERROR - Неизвестная ошибка при поиске устройств: 'NoneType' object has no attribute 'get'
+2025-03-11 21:18:50,825 - INFO - Update id=944033374 is handled. Duration 436 ms by bot id=7499098518
+2025-03-11 21:19:09,016 - INFO - Update id=944033375 is handled. Duration 156 ms by bot id=7499098518
+2025-03-11 21:20:13,717 - INFO - Приложение завершает работу.
+2025-03-11 21:20:13,718 - INFO - Polling stopped for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-11 21:20:13,719 - INFO - Polling stopped
+2025-03-11 21:20:17,487 - ERROR - Файл сертификата не найден: /rsa.crt
+2025-03-11 21:20:17,881 - INFO - Запуск FastAPI и бота...
+2025-03-11 21:20:17,968 - INFO - Подключение к NetBox API успешно.
+2025-03-11 21:20:17,969 - INFO - Бот запущен.
+2025-03-11 21:20:17,969 - INFO - Start polling
+2025-03-11 21:20:18,118 - INFO - Run polling for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-11 21:20:23,800 - INFO - Приложение завершает работу.
+2025-03-11 21:20:23,801 - INFO - Polling stopped for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-11 21:20:23,801 - INFO - Polling stopped
+2025-03-11 21:20:25,378 - ERROR - Файл сертификата не найден: /rsa.crt
+2025-03-11 21:20:27,892 - INFO - Запуск FastAPI и бота...
+2025-03-11 21:20:27,938 - INFO - Подключение к NetBox API успешно.
+2025-03-11 21:20:27,939 - INFO - Бот запущен.
+2025-03-11 21:20:27,939 - INFO - Start polling
+2025-03-11 21:20:28,094 - INFO - Run polling for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-11 21:20:29,154 - ERROR - Файл сертификата не найден: /rsa.crt
+2025-03-11 21:20:35,819 - ERROR - Неизвестная ошибка при поиске устройств: 'NoneType' object has no attribute 'get'
+2025-03-11 21:20:36,058 - INFO - Update id=944033376 is handled. Duration 500 ms by bot id=7499098518
+2025-03-11 21:20:42,609 - ERROR - Неизвестная ошибка при поиске устройств: 'NoneType' object has no attribute 'get'
+2025-03-11 21:20:42,687 - INFO - Update id=944033377 is handled. Duration 281 ms by bot id=7499098518
+2025-03-11 21:23:13,770 - ERROR - Файл сертификата не найден: /rsa.crt
+2025-03-11 21:23:14,611 - INFO - Приложение завершает работу.
+2025-03-11 21:23:14,612 - INFO - Polling stopped for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-11 21:23:14,613 - INFO - Polling stopped
+2025-03-11 21:23:18,766 - INFO - Запуск FastAPI и бота...
+2025-03-11 21:23:18,833 - INFO - Подключение к NetBox API успешно.
+2025-03-11 21:23:18,834 - INFO - Бот запущен.
+2025-03-11 21:23:18,834 - INFO - Start polling
+2025-03-11 21:23:18,991 - INFO - Run polling for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-11 21:23:33,644 - ERROR - Файл сертификата не найден: /rsa.crt
+2025-03-11 21:23:58,557 - ERROR - Файл сертификата не найден: /rsa.crt
+2025-03-11 21:24:01,201 - INFO - Приложение завершает работу.
+2025-03-11 21:24:01,202 - INFO - Polling stopped for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-11 21:24:01,203 - INFO - Polling stopped
+2025-03-11 21:24:05,370 - INFO - Запуск FastAPI и бота...
+2025-03-11 21:24:05,407 - INFO - Подключение к NetBox API успешно.
+2025-03-11 21:24:05,408 - INFO - Бот запущен.
+2025-03-11 21:24:05,408 - INFO - Start polling
+2025-03-11 21:24:05,622 - INFO - Run polling for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-11 21:24:14,016 - ERROR - Файл сертификата не найден: /rsa.crt
+2025-03-11 21:24:17,718 - ERROR - Файл сертификата не найден: /rsa.crt
+2025-03-11 21:24:23,973 - INFO - Приложение завершает работу.
+2025-03-11 21:24:23,974 - INFO - Polling stopped for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-11 21:24:23,974 - INFO - Polling stopped
+2025-03-11 21:24:28,002 - INFO - Запуск FastAPI и бота...
+2025-03-11 21:24:28,084 - INFO - Подключение к NetBox API успешно.
+2025-03-11 21:24:28,084 - INFO - Бот запущен.
+2025-03-11 21:24:28,084 - INFO - Start polling
+2025-03-11 21:24:28,234 - INFO - Run polling for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-11 21:24:37,059 - ERROR - Неизвестная ошибка при поиске устройств: 'NoneType' object has no attribute 'get'
+2025-03-11 21:24:37,311 - INFO - Update id=944033378 is handled. Duration 500 ms by bot id=7499098518
+2025-03-11 21:27:04,692 - ERROR - Файл сертификата не найден: /rsa.crt
+2025-03-11 21:27:10,406 - ERROR - Файл сертификата не найден: /rsa.crt
+2025-03-11 21:27:13,459 - INFO - Приложение завершает работу.
+2025-03-11 21:27:13,460 - INFO - Polling stopped
+2025-03-11 21:27:13,461 - INFO - Polling stopped for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-11 21:27:14,165 - ERROR - Файл сертификата не найден: /rsa.crt
+2025-03-11 21:27:17,532 - INFO - Запуск FastAPI и бота...
+2025-03-11 21:27:17,653 - INFO - Подключение к NetBox API успешно.
+2025-03-11 21:27:17,653 - INFO - Бот запущен.
+2025-03-11 21:27:17,654 - INFO - Start polling
+2025-03-11 21:27:17,802 - INFO - Run polling for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-11 21:27:18,260 - INFO - Update id=944033379 is handled. Duration 390 ms by bot id=7499098518
+2025-03-11 21:27:44,522 - INFO - Update id=944033380 is handled. Duration 1265 ms by bot id=7499098518
+2025-03-11 21:28:04,293 - INFO - По запросу '10.206.9.0/24' ничего не найдено.
+2025-03-11 21:28:04,384 - INFO - Update id=944033381 is handled. Duration 250 ms by bot id=7499098518
+2025-03-11 21:28:22,354 - INFO - По запросу '172.18.54.77' ничего не найдено.
+2025-03-11 21:28:22,486 - INFO - Update id=944033382 is handled. Duration 734 ms by bot id=7499098518
+2025-03-11 21:28:31,268 - INFO - По запросу '172.18.54.111' ничего не найдено.
+2025-03-11 21:28:31,343 - INFO - Update id=944033383 is handled. Duration 234 ms by bot id=7499098518
+2025-03-11 21:28:51,040 - INFO - Update id=944033384 is handled. Duration 358 ms by bot id=7499098518
+2025-03-11 21:33:44,410 - INFO - Приложение завершает работу.
+2025-03-11 21:33:44,411 - INFO - Polling stopped
+2025-03-11 21:33:44,412 - INFO - Polling stopped for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-11 21:34:07,873 - ERROR - Файл сертификата не найден: /rsa.crt
+2025-03-11 21:34:08,274 - INFO - Запуск FastAPI и бота...
+2025-03-11 21:34:08,349 - INFO - Подключение к NetBox API успешно.
+2025-03-11 21:34:08,349 - INFO - Бот запущен.
+2025-03-11 21:34:08,350 - INFO - Start polling
+2025-03-11 21:34:08,504 - INFO - Run polling for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-11 21:34:17,940 - ERROR - Ошибка при поиске устройств: string indices must be integers, not 'str'
+2025-03-11 21:34:18,168 - INFO - Update id=944033385 is handled. Duration 500 ms by bot id=7499098518
+2025-03-11 21:34:25,755 - ERROR - Ошибка при поиске устройств: string indices must be integers, not 'str'
+2025-03-11 21:34:25,834 - INFO - Update id=944033386 is handled. Duration 311 ms by bot id=7499098518
+2025-03-11 21:35:16,124 - ERROR - Файл сертификата не найден: /rsa.crt
+2025-03-11 21:35:46,391 - ERROR - Файл сертификата не найден: /rsa.crt
+2025-03-11 21:35:50,261 - ERROR - Файл сертификата не найден: /rsa.crt
+2025-03-11 21:35:54,028 - ERROR - Файл сертификата не найден: /rsa.crt
+2025-03-11 21:37:39,831 - INFO - Update id=944033387 is handled. Duration 77 ms by bot id=7499098518
+2025-03-11 21:37:42,262 - INFO - Update id=944033388 is handled. Duration 63 ms by bot id=7499098518
+2025-03-11 21:38:28,110 - INFO - Запуск FastAPI и бота...
+2025-03-11 21:38:28,218 - INFO - Подключение к NetBox API успешно.
+2025-03-11 21:38:28,225 - INFO - Бот запущен.
+2025-03-11 21:38:28,225 - INFO - Start polling
+2025-03-11 21:38:28,370 - INFO - Run polling for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-11 21:38:33,342 - INFO - Update id=944033389 is handled. Duration 797 ms by bot id=7499098518
+2025-03-11 21:39:10,429 - ERROR - Ошибка при поиске устройств: Telegram server says - Bad Request: can't parse entities: Can't find end of the entity starting at byte offset 1791
+2025-03-11 21:39:10,511 - INFO - Update id=944033390 is handled. Duration 390 ms by bot id=7499098518
+2025-03-11 21:39:21,846 - ERROR - Ошибка при поиске устройств: Telegram server says - Bad Request: can't parse entities: Can't find end of the entity starting at byte offset 1791
+2025-03-11 21:39:21,928 - INFO - Update id=944033391 is handled. Duration 1203 ms by bot id=7499098518
+2025-03-11 21:41:30,379 - INFO - Приложение завершает работу.
+2025-03-11 21:41:30,380 - INFO - Polling stopped for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-11 21:41:30,380 - INFO - Polling stopped
+2025-03-11 21:41:41,276 - INFO - Запуск FastAPI и бота...
+2025-03-11 21:41:41,348 - INFO - Подключение к NetBox API успешно.
+2025-03-11 21:41:41,348 - INFO - Бот запущен.
+2025-03-11 21:41:41,348 - INFO - Start polling
+2025-03-11 21:41:41,570 - INFO - Run polling for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-11 22:01:22,756 - ERROR - Неизвестная ошибка при поиске устройств: name 'escape_markdown' is not defined
+2025-03-11 22:01:22,960 - INFO - Update id=944033392 is handled. Duration 968 ms by bot id=7499098518
+2025-03-11 22:01:27,816 - ERROR - Неизвестная ошибка при поиске устройств: name 'escape_markdown' is not defined
+2025-03-11 22:01:27,913 - INFO - Update id=944033393 is handled. Duration 343 ms by bot id=7499098518
+2025-03-11 22:04:01,687 - INFO - Запуск FastAPI и бота...
+2025-03-11 22:04:01,775 - INFO - Подключение к NetBox API успешно.
+2025-03-11 22:04:01,775 - INFO - Бот запущен.
+2025-03-11 22:04:01,775 - INFO - Start polling
+2025-03-11 22:04:01,931 - INFO - Run polling for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-11 22:04:12,384 - ERROR - Неизвестная ошибка при поиске устройств: name 'escape_markdown' is not defined
+2025-03-11 22:04:12,672 - INFO - Update id=944033394 is handled. Duration 516 ms by bot id=7499098518
+2025-03-11 22:05:23,236 - INFO - Приложение завершает работу.
+2025-03-11 22:05:23,237 - INFO - Polling stopped for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-11 22:05:23,237 - INFO - Polling stopped
+2025-03-11 22:11:32,991 - INFO - Запуск FastAPI и бота...
+2025-03-11 22:11:33,104 - INFO - Подключение к NetBox API успешно.
+2025-03-11 22:11:33,104 - INFO - Бот запущен.
+2025-03-11 22:11:33,104 - INFO - Start polling
+2025-03-11 22:11:33,253 - INFO - Run polling for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-11 22:11:40,337 - INFO - Update id=944033395 is handled. Duration 436 ms by bot id=7499098518
+2025-03-11 22:11:47,937 - INFO - Update id=944033396 is handled. Duration 406 ms by bot id=7499098518
+2025-03-11 22:23:25,703 - INFO - Запуск FastAPI и бота...
+2025-03-11 22:23:25,705 - ERROR - Ошибка при запуске бота: 'NetBoxClient' object has no attribute 'check_connection'
+2025-03-11 22:24:08,151 - INFO - Приложение завершает работу.
+2025-03-11 22:24:11,954 - INFO - Запуск FastAPI и бота...
+2025-03-11 22:24:11,954 - ERROR - Ошибка при запуске бота: 'NetBoxClient' object has no attribute 'check_connection'
+2025-03-11 22:24:20,348 - INFO - Приложение завершает работу.
+2025-03-11 22:24:24,174 - INFO - Запуск FastAPI и бота...
+2025-03-11 22:24:24,174 - ERROR - Ошибка при запуске бота: 'NetBoxClient' object has no attribute 'check_connection'
+2025-03-11 22:27:31,432 - INFO - Приложение завершает работу.
+2025-03-11 22:36:16,478 - INFO - Запуск FastAPI и бота...
+2025-03-11 22:36:16,514 - ERROR - Ошибка при проверке подключения к NetBox API: 404, message='Not Found', url='https://netbox.istranet.lan/api//status/'
+2025-03-11 22:36:16,514 - ERROR - Не удалось подключиться к NetBox API. Бот не запущен.
+2025-03-11 22:36:21,310 - INFO - Приложение завершает работу.
+2025-03-11 22:46:59,988 - INFO - Запуск FastAPI и бота...
+2025-03-11 22:47:00,096 - INFO - Подключение к NetBox API успешно.
+2025-03-11 22:47:00,097 - INFO - Бот запущен.
+2025-03-11 22:47:00,097 - INFO - Start polling
+2025-03-11 22:47:00,253 - INFO - Run polling for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-11 22:47:00,555 - INFO - Update id=944033401 is handled. Duration 235 ms by bot id=7499098518
+2025-03-11 22:47:00,574 - INFO - Update id=944033400 is handled. Duration 250 ms by bot id=7499098518
+2025-03-11 22:47:00,602 - INFO - Update id=944033399 is handled. Duration 281 ms by bot id=7499098518
+2025-03-11 22:47:00,629 - INFO - Update id=944033397 is handled. Duration 313 ms by bot id=7499098518
+2025-03-11 22:47:00,652 - INFO - Update id=944033403 is handled. Duration 328 ms by bot id=7499098518
+2025-03-11 22:47:00,678 - INFO - Update id=944033398 is handled. Duration 360 ms by bot id=7499098518
+2025-03-11 22:47:00,711 - INFO - Update id=944033402 is handled. Duration 390 ms by bot id=7499098518
+2025-03-11 22:47:26,800 - INFO - Update id=944033404 is handled. Duration 203 ms by bot id=7499098518
+2025-03-11 22:47:28,266 - INFO - Update id=944033405 is handled. Duration 93 ms by bot id=7499098518
+2025-03-11 22:48:43,886 - INFO - Запуск FastAPI и бота...
+2025-03-11 22:48:44,262 - INFO - Бот запущен.
+2025-03-11 22:48:44,268 - INFO - Start polling
+2025-03-11 22:48:44,422 - INFO - Run polling for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-11 22:48:44,468 - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-03-11 22:48:44,469 - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7499098518)
+2025-03-11 22:48:48,561 - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-03-11 22:48:48,561 - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 7499098518)
+2025-03-11 22:48:49,616 - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-03-11 22:48:49,616 - WARNING - Sleep for 1.240616 seconds and try again... (tryings = 1, bot id = 7499098518)
+2025-03-11 22:48:53,890 - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-03-11 22:48:53,906 - WARNING - Sleep for 1.168487 seconds and try again... (tryings = 1, bot id = 7499098518)
+2025-03-11 22:48:55,108 - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-03-11 22:48:55,108 - WARNING - Sleep for 1.490222 seconds and try again... (tryings = 2, bot id = 7499098518)
+2025-03-11 22:48:59,653 - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-03-11 22:48:59,653 - WARNING - Sleep for 1.591436 seconds and try again... (tryings = 2, bot id = 7499098518)
+2025-03-11 22:49:01,287 - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-03-11 22:49:01,287 - WARNING - Sleep for 1.978362 seconds and try again... (tryings = 3, bot id = 7499098518)
+2025-03-11 22:49:06,319 - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-03-11 22:49:06,319 - WARNING - Sleep for 1.970243 seconds and try again... (tryings = 3, bot id = 7499098518)
+2025-03-11 22:49:08,337 - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-03-11 22:49:08,337 - WARNING - Sleep for 2.558005 seconds and try again... (tryings = 4, bot id = 7499098518)
+2025-03-11 22:49:13,943 - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-03-11 22:49:13,944 - WARNING - Sleep for 2.532652 seconds and try again... (tryings = 4, bot id = 7499098518)
+2025-03-11 22:49:16,548 - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-03-11 22:49:16,548 - WARNING - Sleep for 3.071152 seconds and try again... (tryings = 5, bot id = 7499098518)
+2025-03-11 22:49:19,687 - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-03-11 22:49:19,687 - WARNING - Sleep for 3.210960 seconds and try again... (tryings = 5, bot id = 7499098518)
+2025-03-11 22:49:22,967 - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-03-11 22:49:22,967 - WARNING - Sleep for 4.132183 seconds and try again... (tryings = 6, bot id = 7499098518)
+2025-03-11 22:49:27,141 - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-03-11 22:49:27,141 - WARNING - Sleep for 4.132567 seconds and try again... (tryings = 6, bot id = 7499098518)
+2025-03-11 22:49:31,338 - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-03-11 22:49:31,338 - WARNING - Sleep for 5.048004 seconds and try again... (tryings = 7, bot id = 7499098518)
+2025-03-11 22:49:36,443 - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2025-03-11 22:49:36,443 - WARNING - Sleep for 4.995072 seconds and try again... (tryings = 7, bot id = 7499098518)
+2025-03-11 22:49:38,934 - INFO - Приложение завершает работу.
+2025-03-11 22:49:38,935 - INFO - Polling stopped
+2025-03-11 22:49:38,935 - INFO - Polling stopped for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-11 22:49:46,437 - INFO - Connection established (tryings = 8, bot id = 7499098518)
+2025-03-11 22:50:13,953 - INFO - Запуск FastAPI и бота...
+2025-03-11 22:50:14,049 - INFO - Бот запущен.
+2025-03-11 22:50:14,049 - INFO - Start polling
+2025-03-11 22:50:14,205 - INFO - Run polling for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-11 22:50:18,252 - INFO - Update id=944033406 is handled. Duration 188 ms by bot id=7499098518
+2025-03-11 22:50:36,857 - ERROR - Ошибка при поиске устройства: name 'escape_markdown' is not defined
+2025-03-11 22:50:36,952 - INFO - Update id=944033407 is handled. Duration 327 ms by bot id=7499098518
+2025-03-11 22:51:06,288 - INFO - Update id=944033408 is not handled. Duration 0 ms by bot id=7499098518
+2025-03-11 22:51:18,266 - INFO - Update id=944033409 is not handled. Duration 15 ms by bot id=7499098518
+2025-03-11 22:51:38,562 - INFO - Update id=944033410 is not handled. Duration 0 ms by bot id=7499098518
+2025-03-11 22:51:39,676 - INFO - Update id=944033411 is not handled. Duration 0 ms by bot id=7499098518
+2025-03-11 22:52:19,381 - INFO - Приложение завершает работу.
+2025-03-11 22:52:19,381 - INFO - Polling stopped
+2025-03-11 22:52:19,381 - INFO - Polling stopped for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-11 22:52:23,532 - INFO - Запуск FastAPI и бота...
+2025-03-11 22:52:23,678 - INFO - Бот запущен.
+2025-03-11 22:52:23,679 - INFO - Start polling
+2025-03-11 22:52:23,824 - INFO - Run polling for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-11 22:52:59,372 - INFO - Приложение завершает работу.
+2025-03-11 22:52:59,373 - INFO - Polling stopped
+2025-03-11 22:52:59,373 - INFO - Polling stopped for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-11 22:53:03,426 - INFO - Запуск FastAPI и бота...
+2025-03-11 22:53:03,472 - INFO - Бот запущен.
+2025-03-11 22:53:03,472 - INFO - Start polling
+2025-03-11 22:53:03,624 - INFO - Run polling for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-11 22:53:29,398 - INFO - Приложение завершает работу.
+2025-03-11 22:53:29,398 - INFO - Polling stopped
+2025-03-11 22:53:29,398 - INFO - Polling stopped for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-11 22:53:33,451 - INFO - Запуск FastAPI и бота...
+2025-03-11 22:53:33,578 - INFO - Бот запущен.
+2025-03-11 22:53:33,578 - INFO - Start polling
+2025-03-11 22:53:33,725 - INFO - Run polling for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-11 22:54:01,205 - INFO - Приложение завершает работу.
+2025-03-11 22:54:01,205 - INFO - Polling stopped
+2025-03-11 22:54:01,205 - INFO - Polling stopped for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-11 22:54:05,214 - INFO - Запуск FastAPI и бота...
+2025-03-11 22:54:05,255 - INFO - Бот запущен.
+2025-03-11 22:54:05,256 - INFO - Start polling
+2025-03-11 22:54:05,409 - INFO - Run polling for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-11 22:54:39,454 - INFO - Приложение завершает работу.
+2025-03-11 22:54:39,455 - INFO - Polling stopped
+2025-03-11 22:54:39,455 - INFO - Polling stopped for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-11 22:54:43,479 - INFO - Запуск FastAPI и бота...
+2025-03-11 22:54:43,688 - INFO - Бот запущен.
+2025-03-11 22:54:43,688 - INFO - Start polling
+2025-03-11 22:54:43,843 - INFO - Run polling for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-11 22:55:09,436 - INFO - Приложение завершает работу.
+2025-03-11 22:55:09,436 - INFO - Polling stopped
+2025-03-11 22:55:09,436 - INFO - Polling stopped for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-11 22:55:13,435 - INFO - Запуск FastAPI и бота...
+2025-03-11 22:55:13,480 - INFO - Бот запущен.
+2025-03-11 22:55:13,480 - INFO - Start polling
+2025-03-11 22:55:13,621 - INFO - Run polling for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-11 22:56:19,496 - INFO - Приложение завершает работу.
+2025-03-11 22:56:19,496 - INFO - Polling stopped
+2025-03-11 22:56:19,498 - INFO - Polling stopped for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-11 22:59:12,523 - INFO - Запуск FastAPI и бота...
+2025-03-11 22:59:12,610 - INFO - Бот запущен.
+2025-03-11 22:59:12,611 - INFO - Start polling
+2025-03-11 22:59:12,763 - INFO - Run polling for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-11 22:59:18,755 - INFO - Update id=944033412 is handled. Duration 188 ms by bot id=7499098518
+2025-03-11 22:59:24,568 - ERROR - Ошибка при поиске устройства: name 'escape_markdown' is not defined
+2025-03-11 22:59:24,681 - INFO - Update id=944033413 is handled. Duration 327 ms by bot id=7499098518
+2025-03-11 23:01:49,439 - INFO - Update id=944033414 is handled. Duration 77 ms by bot id=7499098518
+2025-03-11 23:02:00,966 - ERROR - Ошибка при поиске устройства: name 'escape_markdown' is not defined
+2025-03-11 23:02:01,087 - INFO - Update id=944033415 is handled. Duration 391 ms by bot id=7499098518
+2025-03-11 23:02:32,960 - INFO - Запуск FastAPI и бота...
+2025-03-11 23:02:33,024 - INFO - Бот запущен.
+2025-03-11 23:02:33,024 - ERROR - Ошибка при запуске бота: name 'bot' is not defined
+2025-03-11 23:03:16,846 - INFO - Приложение завершает работу.
+2025-03-11 23:03:19,892 - INFO - Запуск FastAPI и бота...
+2025-03-11 23:03:20,003 - INFO - Бот запущен.
+2025-03-11 23:03:20,003 - ERROR - Ошибка при запуске бота: name 'bot' is not defined
+2025-03-11 23:03:37,271 - INFO - Приложение завершает работу.
+2025-03-11 23:03:41,086 - INFO - Запуск FastAPI и бота...
+2025-03-11 23:03:41,130 - INFO - Бот запущен.
+2025-03-11 23:03:41,131 - INFO - Start polling
+2025-03-11 23:03:41,286 - INFO - Run polling for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-11 23:03:51,914 - INFO - Update id=944033416 is handled. Duration 421 ms by bot id=7499098518
+2025-03-11 23:04:03,141 - INFO - Update id=944033417 is not handled. Duration 0 ms by bot id=7499098518
+2025-03-11 23:04:08,586 - INFO - Update id=944033418 is not handled. Duration 0 ms by bot id=7499098518
+2025-03-11 23:04:09,111 - INFO - Update id=944033419 is not handled. Duration 0 ms by bot id=7499098518
+2025-03-11 23:04:11,145 - INFO - Update id=944033420 is handled. Duration 171 ms by bot id=7499098518
+2025-03-11 23:04:13,754 - INFO - Update id=944033421 is handled. Duration 78 ms by bot id=7499098518
+2025-03-11 23:04:19,040 - INFO - Update id=944033422 is handled. Duration 94 ms by bot id=7499098518
+2025-03-11 23:04:37,735 - INFO - Update id=944033423 is handled. Duration 203 ms by bot id=7499098518
+2025-03-11 23:04:59,049 - INFO - Update id=944033424 is handled. Duration 187 ms by bot id=7499098518
+2025-03-11 23:05:28,788 - INFO - Update id=944033425 is handled. Duration 264 ms by bot id=7499098518
+2025-03-11 23:07:27,465 - INFO - Приложение завершает работу.
+2025-03-11 23:07:27,465 - INFO - Polling stopped
+2025-03-11 23:07:27,465 - INFO - Polling stopped for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-11 23:07:31,703 - INFO - Запуск FastAPI и бота...
+2025-03-11 23:07:31,709 - INFO - Приложение завершает работу.
+2025-03-11 23:07:35,531 - INFO - Запуск FastAPI и бота...
+2025-03-11 23:07:35,606 - INFO - Ответ от NetBox API: {'django-version': '5.1.5', 'installed-apps': {'django_filters': '24.3', 'django_prometheus': '2.3.1', 'django_rq': '3.0.0', 'django_tables2': '2.7.5', 'drf_spectacular': '0.28.0', 'drf_spectacular_sidecar': '2025.2.1', 'mptt': '0.16.0', 'netbox_inventory': '2.3.0', 'netbox_qrcode': '0.0.16', 'rest_framework': '3.15.2', 'social_django': '5.4.2', 'taggit': '6.1.0', 'timezone_field': '7.1'}, 'netbox-version': '4.2.3', 'plugins': {'netbox_documents': '0.7.1', 'netbox_inventory': '2.3.0', 'netbox_qrcode': '0.0.16', 'netbox_topology_views': '4.2.0'}, 'python-version': '3.10.12', 'rq-workers-running': 1}
+2025-03-11 23:07:35,606 - INFO - Бот запущен.
+2025-03-11 23:07:35,606 - INFO - Start polling
+2025-03-11 23:07:35,761 - INFO - Run polling for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-11 23:08:07,475 - INFO - Приложение завершает работу.
+2025-03-11 23:08:07,476 - INFO - Polling stopped
+2025-03-11 23:08:07,476 - INFO - Polling stopped for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-11 23:08:11,490 - INFO - Запуск FastAPI и бота...
+2025-03-11 23:08:11,500 - INFO - Приложение завершает работу.
+2025-03-11 23:08:15,260 - INFO - Запуск FastAPI и бота...
+2025-03-11 23:08:15,275 - INFO - Приложение завершает работу.
+2025-03-11 23:08:19,018 - INFO - Запуск FastAPI и бота...
+2025-03-11 23:08:19,057 - INFO - Ответ от NetBox API: {'django-version': '5.1.5', 'installed-apps': {'django_filters': '24.3', 'django_prometheus': '2.3.1', 'django_rq': '3.0.0', 'django_tables2': '2.7.5', 'drf_spectacular': '0.28.0', 'drf_spectacular_sidecar': '2025.2.1', 'mptt': '0.16.0', 'netbox_inventory': '2.3.0', 'netbox_qrcode': '0.0.16', 'rest_framework': '3.15.2', 'social_django': '5.4.2', 'taggit': '6.1.0', 'timezone_field': '7.1'}, 'netbox-version': '4.2.3', 'plugins': {'netbox_documents': '0.7.1', 'netbox_inventory': '2.3.0', 'netbox_qrcode': '0.0.16', 'netbox_topology_views': '4.2.0'}, 'python-version': '3.10.12', 'rq-workers-running': 1}
+2025-03-11 23:08:19,057 - INFO - Бот запущен.
+2025-03-11 23:08:19,057 - INFO - Start polling
+2025-03-11 23:08:19,210 - INFO - Run polling for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-11 23:08:57,467 - INFO - Приложение завершает работу.
+2025-03-11 23:08:57,468 - INFO - Polling stopped for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-11 23:08:57,468 - INFO - Polling stopped
+2025-03-11 23:09:01,514 - INFO - Запуск FastAPI и бота...
+2025-03-11 23:09:01,578 - INFO - Ответ от NetBox API: {'django-version': '5.1.5', 'installed-apps': {'django_filters': '24.3', 'django_prometheus': '2.3.1', 'django_rq': '3.0.0', 'django_tables2': '2.7.5', 'drf_spectacular': '0.28.0', 'drf_spectacular_sidecar': '2025.2.1', 'mptt': '0.16.0', 'netbox_inventory': '2.3.0', 'netbox_qrcode': '0.0.16', 'rest_framework': '3.15.2', 'social_django': '5.4.2', 'taggit': '6.1.0', 'timezone_field': '7.1'}, 'netbox-version': '4.2.3', 'plugins': {'netbox_documents': '0.7.1', 'netbox_inventory': '2.3.0', 'netbox_qrcode': '0.0.16', 'netbox_topology_views': '4.2.0'}, 'python-version': '3.10.12', 'rq-workers-running': 1}
+2025-03-11 23:09:01,579 - INFO - Бот запущен.
+2025-03-11 23:09:01,580 - INFO - Start polling
+2025-03-11 23:09:01,728 - INFO - Run polling for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-11 23:10:47,523 - INFO - Приложение завершает работу.
+2025-03-11 23:10:47,523 - INFO - Polling stopped for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-11 23:10:47,523 - INFO - Polling stopped
+2025-03-11 23:10:51,610 - INFO - Запуск FastAPI и бота...
+2025-03-11 23:10:51,791 - INFO - Ответ от NetBox API: {'django-version': '5.1.5', 'installed-apps': {'django_filters': '24.3', 'django_prometheus': '2.3.1', 'django_rq': '3.0.0', 'django_tables2': '2.7.5', 'drf_spectacular': '0.28.0', 'drf_spectacular_sidecar': '2025.2.1', 'mptt': '0.16.0', 'netbox_inventory': '2.3.0', 'netbox_qrcode': '0.0.16', 'rest_framework': '3.15.2', 'social_django': '5.4.2', 'taggit': '6.1.0', 'timezone_field': '7.1'}, 'netbox-version': '4.2.3', 'plugins': {'netbox_documents': '0.7.1', 'netbox_inventory': '2.3.0', 'netbox_qrcode': '0.0.16', 'netbox_topology_views': '4.2.0'}, 'python-version': '3.10.12', 'rq-workers-running': 1}
+2025-03-11 23:10:51,791 - INFO - Бот запущен.
+2025-03-11 23:10:51,791 - INFO - Start polling
+2025-03-11 23:10:51,936 - INFO - Run polling for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-11 23:11:01,830 - INFO - Ответ от NetBox API: {'count': 1, 'next': None, 'previous': None, 'results': [{'id': 166, 'url': 'https://netbox.istranet.lan/api/dcim/devices/166/', 'display_url': 'https://netbox.istranet.lan/dcim/devices/166/', 'display': 'node-06', 'name': 'node-06', 'device_type': {'id': 53, 'url': 'https://netbox.istranet.lan/api/dcim/device-types/53/', 'display': 'RSC-4BT', 'manufacturer': {'id': 17, 'url': 'https://netbox.istranet.lan/api/dcim/manufacturers/17/', 'display': 'AIC', 'name': 'AIC', 'slug': 'aic', 'description': ''}, 'model': 'RSC-4BT', 'slug': 'rsc-4bt', 'description': ''}, 'role': {'id': 6, 'url': 'https://netbox.istranet.lan/api/dcim/device-roles/6/', 'display': 'Server', 'name': 'Server', 'slug': 'server', 'description': ''}, 'tenant': None, 'platform': None, 'serial': '', 'asset_tag': None, 'site': {'id': 2, 'url': 'https://netbox.istranet.lan/api/dcim/sites/2/', 'display': 'Серверная Пятёрочка', 'name': 'Серверная Пятёрочка', 'slug': 'servernaya_pyaterochka', 'description': ''}, 'location': None, 'rack': {'id': 19, 'url': 'https://netbox.istranet.lan/api/dcim/racks/19/', 'display': 'Ряд 2 Стойка 1 (Р2/С1)', 'name': 'Ряд 2 Стойка 1 (Р2/С1)', 'description': ''}, 'position': 6.0, 'face': {'value': 'front', 'label': 'Front'}, 'latitude': None, 'longitude': None, 'parent_device': None, 'status': {'value': 'active', 'label': 'Active'}, 'airflow': {'value': 'front-to-rear', 'label': 'Front to rear'}, 'primary_ip': None, 'primary_ip4': None, 'primary_ip6': None, 'oob_ip': None, 'cluster': {'id': 1, 'url': 'https://netbox.istranet.lan/api/virtualization/clusters/1/', 'display': 'istranet', 'name': 'istranet', 'description': ''}, 'virtual_chassis': None, 'vc_position': None, 'vc_priority': None, 'description': '', 'comments': '', 'config_template': None, 'config_context': {}, 'local_context_data': None, 'tags': [], 'custom_fields': {'install_date': None, 'last_battery_change': None, 'snmp_community': None, 'Platform': 'Supermicro', 'CPU': '2x Intel Xeon E5-2680v4 2.40GHz', 'Memory': '8x HPE PC4-2400T-L 805358-B21 64Gb 2400MHz'}, 'created': '2024-05-29T11:26:04.980273+03:00', 'last_updated': '2025-02-18T16:43:17.889766+03:00', 'console_port_count': 0, 'console_server_port_count': 0, 'power_port_count': 0, 'power_outlet_count': 0, 'interface_count': 0, 'front_port_count': 0, 'rear_port_count': 0, 'device_bay_count': 0, 'module_bay_count': 9, 'inventory_item_count': 0}]}
+2025-03-11 23:11:01,831 - INFO - Данные устройства: {'id': 166, 'url': 'https://netbox.istranet.lan/api/dcim/devices/166/', 'display_url': 'https://netbox.istranet.lan/dcim/devices/166/', 'display': 'node-06', 'name': 'node-06', 'device_type': {'id': 53, 'url': 'https://netbox.istranet.lan/api/dcim/device-types/53/', 'display': 'RSC-4BT', 'manufacturer': {'id': 17, 'url': 'https://netbox.istranet.lan/api/dcim/manufacturers/17/', 'display': 'AIC', 'name': 'AIC', 'slug': 'aic', 'description': ''}, 'model': 'RSC-4BT', 'slug': 'rsc-4bt', 'description': ''}, 'role': {'id': 6, 'url': 'https://netbox.istranet.lan/api/dcim/device-roles/6/', 'display': 'Server', 'name': 'Server', 'slug': 'server', 'description': ''}, 'tenant': None, 'platform': None, 'serial': '', 'asset_tag': None, 'site': {'id': 2, 'url': 'https://netbox.istranet.lan/api/dcim/sites/2/', 'display': 'Серверная Пятёрочка', 'name': 'Серверная Пятёрочка', 'slug': 'servernaya_pyaterochka', 'description': ''}, 'location': None, 'rack': {'id': 19, 'url': 'https://netbox.istranet.lan/api/dcim/racks/19/', 'display': 'Ряд 2 Стойка 1 (Р2/С1)', 'name': 'Ряд 2 Стойка 1 (Р2/С1)', 'description': ''}, 'position': 6.0, 'face': {'value': 'front', 'label': 'Front'}, 'latitude': None, 'longitude': None, 'parent_device': None, 'status': {'value': 'active', 'label': 'Active'}, 'airflow': {'value': 'front-to-rear', 'label': 'Front to rear'}, 'primary_ip': None, 'primary_ip4': None, 'primary_ip6': None, 'oob_ip': None, 'cluster': {'id': 1, 'url': 'https://netbox.istranet.lan/api/virtualization/clusters/1/', 'display': 'istranet', 'name': 'istranet', 'description': ''}, 'virtual_chassis': None, 'vc_position': None, 'vc_priority': None, 'description': '', 'comments': '', 'config_template': None, 'config_context': {}, 'local_context_data': None, 'tags': [], 'custom_fields': {'install_date': None, 'last_battery_change': None, 'snmp_community': None, 'Platform': 'Supermicro', 'CPU': '2x Intel Xeon E5-2680v4 2.40GHz', 'Memory': '8x HPE PC4-2400T-L 805358-B21 64Gb 2400MHz'}, 'created': '2024-05-29T11:26:04.980273+03:00', 'last_updated': '2025-02-18T16:43:17.889766+03:00', 'console_port_count': 0, 'console_server_port_count': 0, 'power_port_count': 0, 'power_outlet_count': 0, 'interface_count': 0, 'front_port_count': 0, 'rear_port_count': 0, 'device_bay_count': 0, 'module_bay_count': 9, 'inventory_item_count': 0}
+2025-03-11 23:11:01,831 - ERROR - Ошибка при поиске устройств: 'NoneType' object is not iterable
+2025-03-11 23:11:02,023 - INFO - Update id=944033426 is handled. Duration 421 ms by bot id=7499098518
+2025-03-11 23:12:01,212 - INFO - Приложение завершает работу.
+2025-03-11 23:12:01,213 - INFO - Polling stopped for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-11 23:12:01,213 - INFO - Polling stopped
+2025-03-11 23:12:05,328 - INFO - Запуск FastAPI и бота...
+2025-03-11 23:12:05,418 - INFO - Ответ от NetBox API: {'django-version': '5.1.5', 'installed-apps': {'django_filters': '24.3', 'django_prometheus': '2.3.1', 'django_rq': '3.0.0', 'django_tables2': '2.7.5', 'drf_spectacular': '0.28.0', 'drf_spectacular_sidecar': '2025.2.1', 'mptt': '0.16.0', 'netbox_inventory': '2.3.0', 'netbox_qrcode': '0.0.16', 'rest_framework': '3.15.2', 'social_django': '5.4.2', 'taggit': '6.1.0', 'timezone_field': '7.1'}, 'netbox-version': '4.2.3', 'plugins': {'netbox_documents': '0.7.1', 'netbox_inventory': '2.3.0', 'netbox_qrcode': '0.0.16', 'netbox_topology_views': '4.2.0'}, 'python-version': '3.10.12', 'rq-workers-running': 1}
+2025-03-11 23:12:05,418 - INFO - Бот запущен.
+2025-03-11 23:12:05,419 - INFO - Start polling
+2025-03-11 23:12:05,572 - INFO - Run polling for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-11 23:13:01,153 - INFO - Приложение завершает работу.
+2025-03-11 23:13:01,153 - INFO - Polling stopped for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-11 23:13:01,153 - INFO - Polling stopped
+2025-03-11 23:13:05,194 - INFO - Запуск FastAPI и бота...
+2025-03-11 23:13:05,194 - ERROR - Ошибка при запуске бота: 'NetBoxClient' object has no attribute 'check_connection'
+2025-03-11 23:14:01,221 - INFO - Приложение завершает работу.
+2025-03-11 23:14:05,075 - INFO - Запуск FastAPI и бота...
+2025-03-11 23:14:05,075 - ERROR - Ошибка при запуске приложения: start_bot() missing 1 required positional argument: 'bot'
+2025-03-11 23:14:05,075 - INFO - Приложение завершает работу.
+2025-03-11 23:16:21,048 - INFO - Запуск FastAPI и бота...
+2025-03-11 23:16:21,049 - ERROR - Ошибка при запуске приложения: start_bot() missing 1 required positional argument: 'bot'
+2025-03-11 23:16:21,049 - INFO - Приложение завершает работу.
+2025-03-11 23:16:24,837 - INFO - Запуск FastAPI и бота...
+2025-03-11 23:16:24,837 - ERROR - Ошибка при запуске приложения: start_bot() missing 1 required positional argument: 'bot'
+2025-03-11 23:16:24,837 - INFO - Приложение завершает работу.
+2025-03-11 23:16:28,584 - INFO - Запуск FastAPI и бота...
+2025-03-11 23:16:28,584 - ERROR - Ошибка при запуске приложения: start_bot() missing 1 required positional argument: 'bot'
+2025-03-11 23:16:28,584 - INFO - Приложение завершает работу.
+2025-03-11 23:16:37,472 - INFO - Запуск FastAPI и бота...
+2025-03-11 23:16:37,472 - ERROR - Ошибка при запуске приложения: start_bot() missing 1 required positional argument: 'bot'
+2025-03-11 23:16:37,473 - INFO - Приложение завершает работу.
+2025-03-11 23:18:29,861 - INFO - Запуск FastAPI и бота...
+2025-03-11 23:18:29,861 - ERROR - Ошибка при запуске приложения: start_bot() missing 1 required positional argument: 'bot'
+2025-03-11 23:18:29,861 - INFO - Приложение завершает работу.
+2025-03-11 23:19:24,798 - INFO - Запуск FastAPI и бота...
+2025-03-11 23:19:24,798 - ERROR - Ошибка при запуске приложения: start_bot() missing 1 required positional argument: 'bot'
+2025-03-11 23:19:24,799 - INFO - Приложение завершает работу.
+2025-03-11 23:19:47,275 - INFO - Запуск FastAPI и бота...
+2025-03-11 23:19:47,275 - ERROR - Ошибка при запуске приложения: start_bot() missing 1 required positional argument: 'bot'
+2025-03-11 23:19:47,275 - INFO - Приложение завершает работу.
+2025-03-11 23:20:13,888 - INFO - Запуск FastAPI и бота...
+2025-03-11 23:20:13,888 - ERROR - Ошибка при запуске приложения: start_bot() missing 1 required positional argument: 'bot'
+2025-03-11 23:20:13,888 - INFO - Приложение завершает работу.
+2025-03-11 23:20:17,636 - INFO - Запуск FastAPI и бота...
+2025-03-11 23:20:17,636 - ERROR - Ошибка при запуске приложения: start_bot() missing 1 required positional argument: 'bot'
+2025-03-11 23:20:17,636 - INFO - Приложение завершает работу.
+2025-03-11 23:20:21,374 - INFO - Запуск FastAPI и бота...
+2025-03-11 23:20:21,374 - ERROR - Ошибка при запуске приложения: start_bot() missing 1 required positional argument: 'bot'
+2025-03-11 23:20:21,374 - INFO - Приложение завершает работу.
+2025-03-11 23:20:51,535 - INFO - Запуск FastAPI и бота...
+2025-03-11 23:20:51,535 - ERROR - Ошибка при запуске приложения: start_bot() missing 1 required positional argument: 'bot'
+2025-03-11 23:20:51,535 - INFO - Приложение завершает работу.
+2025-03-11 23:21:02,039 - INFO - Запуск FastAPI и бота...
+2025-03-11 23:21:02,039 - ERROR - Ошибка при запуске приложения: start_bot() missing 1 required positional argument: 'bot'
+2025-03-11 23:21:02,039 - INFO - Приложение завершает работу.
+2025-03-11 23:21:25,765 - INFO - Запуск FastAPI и бота...
+2025-03-11 23:21:25,765 - ERROR - Ошибка при запуске приложения: start_bot() missing 1 required positional argument: 'bot'
+2025-03-11 23:21:25,765 - INFO - Приложение завершает работу.
+2025-03-11 23:21:39,787 - INFO - Запуск FastAPI и бота...
+2025-03-11 23:21:39,787 - ERROR - Ошибка при запуске приложения: start_bot() missing 1 required positional argument: 'bot'
+2025-03-11 23:21:39,787 - INFO - Приложение завершает работу.
+2025-03-11 23:22:29,720 - INFO - Запуск FastAPI и бота...
+2025-03-11 23:22:29,829 - INFO - Бот запущен.
+2025-03-11 23:22:29,829 - INFO - Start polling
+2025-03-11 23:22:29,980 - INFO - Run polling for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-11 23:22:38,764 - INFO - Данные от NetBox API: [{'id': 166, 'url': 'https://netbox.istranet.lan/api/dcim/devices/166/', 'display_url': 'https://netbox.istranet.lan/dcim/devices/166/', 'display': 'node-06', 'name': 'node-06', 'device_type': {'id': 53, 'url': 'https://netbox.istranet.lan/api/dcim/device-types/53/', 'display': 'RSC-4BT', 'manufacturer': {'id': 17, 'url': 'https://netbox.istranet.lan/api/dcim/manufacturers/17/', 'display': 'AIC', 'name': 'AIC', 'slug': 'aic', 'description': ''}, 'model': 'RSC-4BT', 'slug': 'rsc-4bt', 'description': ''}, 'role': {'id': 6, 'url': 'https://netbox.istranet.lan/api/dcim/device-roles/6/', 'display': 'Server', 'name': 'Server', 'slug': 'server', 'description': ''}, 'tenant': None, 'platform': None, 'serial': '', 'asset_tag': None, 'site': {'id': 2, 'url': 'https://netbox.istranet.lan/api/dcim/sites/2/', 'display': 'Серверная Пятёрочка', 'name': 'Серверная Пятёрочка', 'slug': 'servernaya_pyaterochka', 'description': ''}, 'location': None, 'rack': {'id': 19, 'url': 'https://netbox.istranet.lan/api/dcim/racks/19/', 'display': 'Ряд 2 Стойка 1 (Р2/С1)', 'name': 'Ряд 2 Стойка 1 (Р2/С1)', 'description': ''}, 'position': 6.0, 'face': {'value': 'front', 'label': 'Front'}, 'latitude': None, 'longitude': None, 'parent_device': None, 'status': {'value': 'active', 'label': 'Active'}, 'airflow': {'value': 'front-to-rear', 'label': 'Front to rear'}, 'primary_ip': None, 'primary_ip4': None, 'primary_ip6': None, 'oob_ip': None, 'cluster': {'id': 1, 'url': 'https://netbox.istranet.lan/api/virtualization/clusters/1/', 'display': 'istranet', 'name': 'istranet', 'description': ''}, 'virtual_chassis': None, 'vc_position': None, 'vc_priority': None, 'description': '', 'comments': '', 'config_template': None, 'config_context': {}, 'local_context_data': None, 'tags': [], 'custom_fields': {'install_date': None, 'last_battery_change': None, 'snmp_community': None, 'Platform': 'Supermicro', 'CPU': '2x Intel Xeon E5-2680v4 2.40GHz', 'Memory': '8x HPE PC4-2400T-L 805358-B21 64Gb 2400MHz'}, 'created': '2024-05-29T11:26:04.980273+03:00', 'last_updated': '2025-02-18T16:43:17.889766+03:00', 'console_port_count': 0, 'console_server_port_count': 0, 'power_port_count': 0, 'power_outlet_count': 0, 'interface_count': 0, 'front_port_count': 0, 'rear_port_count': 0, 'device_bay_count': 0, 'module_bay_count': 9, 'inventory_item_count': 0}]
+2025-03-11 23:22:38,764 - ERROR - Ошибка при поиске устройства: 'NoneType' object is not iterable
+2025-03-11 23:22:38,965 - INFO - Update id=944033427 is handled. Duration 437 ms by bot id=7499098518
+2025-03-11 23:26:05,190 - INFO - Запуск FastAPI и бота...
+2025-03-11 23:26:05,276 - INFO - Бот запущен.
+2025-03-11 23:26:05,276 - INFO - Start polling
+2025-03-11 23:26:05,430 - INFO - Run polling for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-11 23:26:14,408 - INFO - Данные от NetBox API: [{'id': 166, 'url': 'https://netbox.istranet.lan/api/dcim/devices/166/', 'display_url': 'https://netbox.istranet.lan/dcim/devices/166/', 'display': 'node-06', 'name': 'node-06', 'device_type': {'id': 53, 'url': 'https://netbox.istranet.lan/api/dcim/device-types/53/', 'display': 'RSC-4BT', 'manufacturer': {'id': 17, 'url': 'https://netbox.istranet.lan/api/dcim/manufacturers/17/', 'display': 'AIC', 'name': 'AIC', 'slug': 'aic', 'description': ''}, 'model': 'RSC-4BT', 'slug': 'rsc-4bt', 'description': ''}, 'role': {'id': 6, 'url': 'https://netbox.istranet.lan/api/dcim/device-roles/6/', 'display': 'Server', 'name': 'Server', 'slug': 'server', 'description': ''}, 'tenant': None, 'platform': None, 'serial': '', 'asset_tag': None, 'site': {'id': 2, 'url': 'https://netbox.istranet.lan/api/dcim/sites/2/', 'display': 'Серверная Пятёрочка', 'name': 'Серверная Пятёрочка', 'slug': 'servernaya_pyaterochka', 'description': ''}, 'location': None, 'rack': {'id': 19, 'url': 'https://netbox.istranet.lan/api/dcim/racks/19/', 'display': 'Ряд 2 Стойка 1 (Р2/С1)', 'name': 'Ряд 2 Стойка 1 (Р2/С1)', 'description': ''}, 'position': 6.0, 'face': {'value': 'front', 'label': 'Front'}, 'latitude': None, 'longitude': None, 'parent_device': None, 'status': {'value': 'active', 'label': 'Active'}, 'airflow': {'value': 'front-to-rear', 'label': 'Front to rear'}, 'primary_ip': None, 'primary_ip4': None, 'primary_ip6': None, 'oob_ip': None, 'cluster': {'id': 1, 'url': 'https://netbox.istranet.lan/api/virtualization/clusters/1/', 'display': 'istranet', 'name': 'istranet', 'description': ''}, 'virtual_chassis': None, 'vc_position': None, 'vc_priority': None, 'description': '', 'comments': '', 'config_template': None, 'config_context': {}, 'local_context_data': None, 'tags': [], 'custom_fields': {'install_date': None, 'last_battery_change': None, 'snmp_community': None, 'Platform': 'Supermicro', 'CPU': '2x Intel Xeon E5-2680v4 2.40GHz', 'Memory': '8x HPE PC4-2400T-L 805358-B21 64Gb 2400MHz'}, 'created': '2024-05-29T11:26:04.980273+03:00', 'last_updated': '2025-02-18T16:43:17.889766+03:00', 'console_port_count': 0, 'console_server_port_count': 0, 'power_port_count': 0, 'power_outlet_count': 0, 'interface_count': 0, 'front_port_count': 0, 'rear_port_count': 0, 'device_bay_count': 0, 'module_bay_count': 9, 'inventory_item_count': 0}]
+2025-03-11 23:26:14,408 - ERROR - Ошибка при поиске устройств: 'NoneType' object is not iterable
+2025-03-11 23:26:14,707 - INFO - Update id=944033428 is handled. Duration 531 ms by bot id=7499098518
+2025-03-11 23:28:20,195 - INFO - Запуск FastAPI и бота...
+2025-03-11 23:28:20,276 - INFO - Бот запущен.
+2025-03-11 23:28:20,276 - INFO - Start polling
+2025-03-11 23:28:20,440 - INFO - Run polling for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-11 23:28:25,209 - INFO - Данные от NetBox API: [{'id': 166, 'url': 'https://netbox.istranet.lan/api/dcim/devices/166/', 'display_url': 'https://netbox.istranet.lan/dcim/devices/166/', 'display': 'node-06', 'name': 'node-06', 'device_type': {'id': 53, 'url': 'https://netbox.istranet.lan/api/dcim/device-types/53/', 'display': 'RSC-4BT', 'manufacturer': {'id': 17, 'url': 'https://netbox.istranet.lan/api/dcim/manufacturers/17/', 'display': 'AIC', 'name': 'AIC', 'slug': 'aic', 'description': ''}, 'model': 'RSC-4BT', 'slug': 'rsc-4bt', 'description': ''}, 'role': {'id': 6, 'url': 'https://netbox.istranet.lan/api/dcim/device-roles/6/', 'display': 'Server', 'name': 'Server', 'slug': 'server', 'description': ''}, 'tenant': None, 'platform': None, 'serial': '', 'asset_tag': None, 'site': {'id': 2, 'url': 'https://netbox.istranet.lan/api/dcim/sites/2/', 'display': 'Серверная Пятёрочка', 'name': 'Серверная Пятёрочка', 'slug': 'servernaya_pyaterochka', 'description': ''}, 'location': None, 'rack': {'id': 19, 'url': 'https://netbox.istranet.lan/api/dcim/racks/19/', 'display': 'Ряд 2 Стойка 1 (Р2/С1)', 'name': 'Ряд 2 Стойка 1 (Р2/С1)', 'description': ''}, 'position': 6.0, 'face': {'value': 'front', 'label': 'Front'}, 'latitude': None, 'longitude': None, 'parent_device': None, 'status': {'value': 'active', 'label': 'Active'}, 'airflow': {'value': 'front-to-rear', 'label': 'Front to rear'}, 'primary_ip': None, 'primary_ip4': None, 'primary_ip6': None, 'oob_ip': None, 'cluster': {'id': 1, 'url': 'https://netbox.istranet.lan/api/virtualization/clusters/1/', 'display': 'istranet', 'name': 'istranet', 'description': ''}, 'virtual_chassis': None, 'vc_position': None, 'vc_priority': None, 'description': '', 'comments': '', 'config_template': None, 'config_context': {}, 'local_context_data': None, 'tags': [], 'custom_fields': {'install_date': None, 'last_battery_change': None, 'snmp_community': None, 'Platform': 'Supermicro', 'CPU': '2x Intel Xeon E5-2680v4 2.40GHz', 'Memory': '8x HPE PC4-2400T-L 805358-B21 64Gb 2400MHz'}, 'created': '2024-05-29T11:26:04.980273+03:00', 'last_updated': '2025-02-18T16:43:17.889766+03:00', 'console_port_count': 0, 'console_server_port_count': 0, 'power_port_count': 0, 'power_outlet_count': 0, 'interface_count': 0, 'front_port_count': 0, 'rear_port_count': 0, 'device_bay_count': 0, 'module_bay_count': 9, 'inventory_item_count': 0}]
+2025-03-11 23:28:25,209 - ERROR - Ошибка при поиске устройств: 'NoneType' object is not iterable
+2025-03-11 23:28:25,398 - INFO - Update id=944033429 is handled. Duration 421 ms by bot id=7499098518
+2025-03-11 23:28:35,621 - INFO - Данные от NetBox API: []
+2025-03-11 23:28:35,696 - INFO - Update id=944033430 is handled. Duration 202 ms by bot id=7499098518
+2025-03-11 23:28:57,925 - INFO - Update id=944033431 is not handled. Duration 0 ms by bot id=7499098518
+2025-03-11 23:29:00,464 - INFO - Update id=944033432 is not handled. Duration 0 ms by bot id=7499098518
+2025-03-11 23:29:10,640 - INFO - Update id=944033433 is not handled. Duration 0 ms by bot id=7499098518
