@@ -1863,3 +1863,32 @@ AttributeError: 'NoneType' object has no attribute 'get'
 2025-03-11 23:30:28,074 - INFO - Update id=944033442 is not handled. Duration 0 ms by bot id=7499098518
 2025-03-11 23:30:53,536 - INFO - Данные от NetBox API: [{'id': 32, 'url': 'https://netbox.istranet.lan/api/dcim/devices/32/', 'display_url': 'https://netbox.istranet.lan/dcim/devices/32/', 'display': '10.3.7.173:32011 (1037173)', 'name': '10.3.7.173:32011', 'device_type': {'id': 14, 'url': 'https://netbox.istranet.lan/api/dcim/device-types/14/', 'display': 'CCR1036-12G-4S', 'manufacturer': {'id': 5, 'url': 'https://netbox.istranet.lan/api/dcim/manufacturers/5/', 'display': 'MikroTik', 'name': 'MikroTik', 'slug': 'mikrotik', 'description': ''}, 'model': 'CCR1036-12G-4S', 'slug': 'ccr1036-12g-4s', 'description': ''}, 'role': {'id': 4, 'url': 'https://netbox.istranet.lan/api/dcim/device-roles/4/', 'display': 'Сервисный коммутатор', 'name': 'Сервисный коммутатор', 'slug': 'service_switch', 'description': ''}, 'tenant': None, 'platform': None, 'serial': '851A08B66D4E', 'asset_tag': '1037173', 'site': {'id': 1, 'url': 'https://netbox.istranet.lan/api/dcim/sites/1/', 'display': 'Серверная Адасько', 'name': 'Серверная Адасько', 'slug': 'servernaya_adasko', 'description': ''}, 'location': None, 'rack': {'id': 12, 'url': 'https://netbox.istranet.lan/api/dcim/racks/12/', 'display': 'Ряд 2 Стойка 6 (Р2/С6)', 'name': 'Ряд 2 Стойка 6 (Р2/С6)', 'description': ''}, 'position': 32.0, 'face': {'value': 'front', 'label': 'Front'}, 'latitude': None, 'longitude': None, 'parent_device': None, 'status': {'value': 'active', 'label': 'Active'}, 'airflow': None, 'primary_ip': None, 'primary_ip4': None, 'primary_ip6': None, 'oob_ip': None, 'cluster': None, 'virtual_chassis': None, 'vc_position': None, 'vc_priority': None, 'description': '', 'comments': '', 'config_template': None, 'config_context': {}, 'local_context_data': None, 'tags': [], 'custom_fields': {'install_date': None, 'last_battery_change': None, 'snmp_community': None, 'Platform': None, 'CPU': None, 'Memory': None}, 'created': '2022-07-01T17:29:15.547515+03:00', 'last_updated': '2025-02-26T12:50:05.655992+03:00', 'console_port_count': 1, 'console_server_port_count': 0, 'power_port_count': 1, 'power_outlet_count': 0, 'interface_count': 16, 'front_port_count': 0, 'rear_port_count': 0, 'device_bay_count': 0, 'module_bay_count': 0, 'inventory_item_count': 0}]
 2025-03-11 23:30:53,632 - INFO - Update id=944033443 is handled. Duration 640 ms by bot id=7499098518
+2025-03-12 08:24:13,432 - INFO - Запуск FastAPI и бота...
+2025-03-12 08:24:13,643 - INFO - Бот запущен.
+2025-03-12 08:24:13,643 - INFO - Start polling
+2025-03-12 08:24:13,789 - INFO - Run polling for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-12 08:27:07,759 - INFO - Приложение завершает работу.
+2025-03-12 08:27:07,759 - INFO - Polling stopped for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-12 08:27:07,759 - INFO - Polling stopped
+2025-03-12 08:27:11,557 - INFO - Запуск FastAPI и бота...
+2025-03-12 08:27:11,738 - INFO - Бот запущен.
+2025-03-12 08:27:11,738 - INFO - Start polling
+2025-03-12 08:27:11,882 - INFO - Run polling for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-12 08:27:24,150 - INFO - Update id=944033444 is handled. Duration 250 ms by bot id=7499098518
+2025-03-12 08:27:35,701 - ERROR - Ошибка при запросе к NetBox API: 404, message='Not Found', url='https://netbox.istranet.lan/api/devices/?q=BRAS2'
+2025-03-12 08:27:35,701 - INFO - Данные от NetBox API: []
+2025-03-12 08:27:35,766 - INFO - Update id=944033445 is handled. Duration 156 ms by bot id=7499098518
+2025-03-12 08:27:48,829 - ERROR - Ошибка при запросе к NetBox API: 404, message='Not Found', url='https://netbox.istranet.lan/api/devices/?q=BRAS1'
+2025-03-12 08:27:48,829 - INFO - Данные от NetBox API: []
+2025-03-12 08:27:48,908 - INFO - Update id=944033446 is handled. Duration 125 ms by bot id=7499098518
+2025-03-12 08:28:15,170 - ERROR - Ошибка при запросе к NetBox API: 404, message='Not Found', url='https://netbox.istranet.lan/api/devices/?q=10.3.7.173:32011'
+2025-03-12 08:28:15,170 - INFO - Данные от NetBox API: []
+2025-03-12 08:28:15,241 - INFO - Update id=944033447 is handled. Duration 109 ms by bot id=7499098518
+2025-03-12 08:44:18,313 - INFO - Update id=944033448 is handled. Duration 155 ms by bot id=7499098518
+2025-03-12 08:44:19,903 - INFO - Update id=944033449 is handled. Duration 78 ms by bot id=7499098518
+2025-03-12 08:44:35,910 - ERROR - Ошибка при запросе к NetBox API: 404, message='Not Found', url='https://netbox.istranet.lan/api/devices/?q=BRAS1'
+2025-03-12 08:44:35,910 - INFO - Данные от NetBox API: []
+2025-03-12 08:44:35,983 - INFO - Update id=944033450 is handled. Duration 109 ms by bot id=7499098518
+2025-03-12 08:47:22,813 - INFO - Приложение завершает работу.
+2025-03-12 08:47:22,813 - INFO - Polling stopped for bot @FindInfoNetbox_bot id=7499098518 - 'netbox_search_bot'
+2025-03-12 08:47:22,813 - INFO - Polling stopped

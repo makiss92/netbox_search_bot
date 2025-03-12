@@ -1,5 +1,6 @@
 from aiogram import Bot, Dispatcher, types
 from aiogram.filters import Command
+from aiogram import F
 from app.netbox_client import NetBoxClient, escape_markdown
 from app.config import settings
 import asyncio
@@ -23,6 +24,28 @@ bot = Bot(token=settings.telegram_bot_token)
 dp = Dispatcher()
 netbox_client = NetBoxClient()
 
+# Список доступных команд
+COMMANDS = {
+    "/search_racks": "Поиск стоек",
+    "/search_devices": "Поиск устройств",
+    "/search_connections": "Поиск соединений",
+    "/search_wireless": "Поиск беспроводных устройств",
+    "/search_ipam": "Поиск IP-адресов",
+    "/search_vpn": "Поиск VPN",
+    "/search_virtualization": "Поиск виртуальных машин",
+    "/search_communication_channels": "Поиск каналов связи",
+    "/search_power_supply": "Поиск источников питания",
+}
+
+async def send_help_message(message: types.Message):
+    """
+    Отправляет сообщение с подсказкой по командам.
+    """
+    help_text = "Доступные команды:\n\n"
+    for command, description in COMMANDS.items():
+        help_text += f"{command} - {description}\n"
+    await message.reply(help_text)
+
 @dp.message(Command("start"))
 async def send_welcome(message: types.Message):
     """
@@ -42,16 +65,24 @@ async def send_welcome(message: types.Message):
         "/search_power_supply <запрос> - поиск источников питания"
     )
 
-async def handle_search_command(message: types.Message, endpoint: str, entity_name: str):
+@dp.message(F.text.startswith("/search_"))
+async def handle_search_command(message: types.Message):
     """
     Универсальный обработчик команд поиска.
     """
+    command = message.text.split(" ", 1)[0]
+    if command not in COMMANDS:
+        await message.reply("Неизвестная команда. Вот список доступных команд:")
+        await send_help_message(message)
+        return
+
     query = message.text.split(" ", 1)[1] if len(message.text.split(" ", 1)) > 1 else ""
     if not query:
-        await message.reply(f"Пожалуйста, укажите запрос для поиска {entity_name}.")
+        await message.reply(f"Пожалуйста, укажите запрос для поиска {COMMANDS[command]}.")
         return
 
     try:
+        endpoint = command.replace("/search_", "").replace("_", "-")
         results = await netbox_client.search(endpoint, query)
         logger.info(f"Данные от NetBox API: {results}")  # Логируем данные
 
@@ -60,9 +91,9 @@ async def handle_search_command(message: types.Message, endpoint: str, entity_na
             return
 
         if results:
-            response = f"Найденные {entity_name}:\n\n"
+            response = f"Найденные {COMMANDS[command]}:\n\n"
             for result in results:
-                if endpoint == "dcim/devices":
+                if endpoint == "devices":
                     response += netbox_client._format_device_details(result) + "\n\n"
                 else:
                     response += f"🔹 *{escape_markdown(result.get('name', 'N/A'))}*\n"
@@ -72,91 +103,16 @@ async def handle_search_command(message: types.Message, endpoint: str, entity_na
 
         await message.reply(response, parse_mode="Markdown")
     except Exception as e:
-        logger.error(f"Ошибка при поиске {entity_name}: {e}")
-        await message.reply(f"Произошла ошибка при поиске {entity_name}.")
+        logger.error(f"Ошибка при поиске {COMMANDS[command]}: {e}")
+        await message.reply(f"Произошла ошибка при поиске {COMMANDS[command]}.")
 
-@dp.message(Command("search_racks"))
-async def search_racks(message: types.Message):
+@dp.message()
+async def handle_unknown_command(message: types.Message):
     """
-    Обработчик команды /search_racks.
+    Обработчик неизвестных команд.
     """
-    await handle_search_command(message, "dcim/racks", "стойки")
-
-@dp.message(Command("search_devices"))
-async def search_devices(message: types.Message):
-    query = message.text.split(" ", 1)[1] if len(message.text.split(" ", 1)) > 1 else ""
-    if not query:
-        await message.reply("Пожалуйста, укажите запрос для поиска устройств.")
-        return
-
-    try:
-        devices = await netbox_client.search("dcim/devices", query)
-        logger.info(f"Данные от NetBox API: {devices}")  # Логируем данные
-
-        if devices is None:
-            await message.reply("Ошибка при получении данных от NetBox API.")
-            return
-
-        if devices:
-            response = "Найденные устройства:\n\n"
-            for device in devices:
-                response += netbox_client._format_device_details(device) + "\n\n"
-        else:
-            response = "Ничего не найдено."
-
-        await message.reply(response, parse_mode="Markdown")
-    except Exception as e:
-        logger.error(f"Ошибка при поиске устройств: {e}")
-        await message.reply("Произошла ошибка при поиске устройств.")
-
-@dp.message(Command("search_connections"))
-async def search_connections(message: types.Message):
-    """
-    Обработчик команды /search_connections.
-    """
-    await handle_search_command(message, "dcim/cables", "соединения")
-
-@dp.message(Command("search_wireless"))
-async def search_wireless(message: types.Message):
-    """
-    Обработчик команды /search_wireless.
-    """
-    await handle_search_command(message, "wireless/wireless-links", "беспроводные устройства")
-
-@dp.message(Command("search_ipam"))
-async def search_ipam(message: types.Message):
-    """
-    Обработчик команды /search_ipam.
-    """
-    await handle_search_command(message, "ipam/ip-addresses", "IP-адреса")
-
-@dp.message(Command("search_vpn"))
-async def search_vpn(message: types.Message):
-    """
-    Обработчик команды /search_vpn.
-    """
-    await handle_search_command(message, "vpn/tunnels", "VPN")
-
-@dp.message(Command("search_virtualization"))
-async def search_virtualization(message: types.Message):
-    """
-    Обработчик команды /search_virtualization.
-    """
-    await handle_search_command(message, "virtualization/virtual-machines", "виртуальные машины")
-
-@dp.message(Command("search_communication_channels"))
-async def search_communication_channels(message: types.Message):
-    """
-    Обработчик команды /search_communication_channels.
-    """
-    await handle_search_command(message, "circuits/circuits", "каналы связи")
-
-@dp.message(Command("search_power_supply"))
-async def search_power_supply(message: types.Message):
-    """
-    Обработчик команды /search_power_supply.
-    """
-    await handle_search_command(message, "dcim/power-feeds", "источники питания")
+    await message.reply("Неизвестная команда. Вот список доступных команд:")
+    await send_help_message(message)
 
 async def start_bot(bot: Bot):
     """

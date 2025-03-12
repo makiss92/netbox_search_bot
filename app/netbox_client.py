@@ -70,7 +70,7 @@ class NetBoxClient:
         """
         Универсальный метод для поиска данных в NetBox API.
         """
-        return await self._fetch_data(endpoint, query)
+        return await self._fetch_data(f"dcim/{endpoint}", query)
 
     async def check_connection(self):
         """
